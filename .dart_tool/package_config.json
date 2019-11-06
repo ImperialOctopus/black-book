@@ -68,16 +68,16 @@
       "languageVersion": "2.2"
     },
     {
+      "name": "hive",
+      "rootUri": "file:///C:/tools/flutter/.pub-cache/hosted/pub.dartlang.org/hive-1.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.5"
+    },
+    {
       "name": "image",
       "rootUri": "file:///C:/tools/flutter/.pub-cache/hosted/pub.dartlang.org/image-2.1.4",
       "packageUri": "lib/",
       "languageVersion": "2.0"
-    },
-    {
-      "name": "localstorage",
-      "rootUri": "file:///C:/tools/flutter/.pub-cache/hosted/pub.dartlang.org/localstorage-3.0.0+2",
-      "packageUri": "lib/",
-      "languageVersion": "2.2"
     },
     {
       "name": "matcher",
@@ -98,12 +98,6 @@
       "languageVersion": "2.0"
     },
     {
-      "name": "path_provider",
-      "rootUri": "file:///C:/tools/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-1.4.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.0"
-    },
-    {
       "name": "pedantic",
       "rootUri": "file:///C:/tools/flutter/.pub-cache/hosted/pub.dartlang.org/pedantic-1.8.0+1",
       "packageUri": "lib/",
@@ -116,10 +110,10 @@
       "languageVersion": "2.4"
     },
     {
-      "name": "platform",
-      "rootUri": "file:///C:/tools/flutter/.pub-cache/hosted/pub.dartlang.org/platform-2.2.1",
+      "name": "pointycastle",
+      "rootUri": "file:///C:/tools/flutter/.pub-cache/hosted/pub.dartlang.org/pointycastle-1.0.1",
       "packageUri": "lib/",
-      "languageVersion": "1.24"
+      "languageVersion": "0.8"
     },
     {
       "name": "quiver",
@@ -194,7 +188,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2019-11-06T14:07:58.445203Z",
+  "generated": "2019-11-06T15:04:00.115499Z",
   "generator": "pub",
   "generatorVersion": "2.7.0"
 }
