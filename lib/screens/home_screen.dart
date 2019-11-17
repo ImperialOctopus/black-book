@@ -1,6 +1,7 @@
+import 'package:black_book/routes/enter_exit_route.dart';
 import 'package:flutter/material.dart';
 
-import 'category_screen.dart';
+import 'categories/first_category_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -9,15 +10,21 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('First Screen'),
       ),
-      body: Center(
-        child: RaisedButton(
-          child: const Text('Go to Second'),
-          onPressed: () {
-            // Pushs the SecondScreen widget onto the navigation stack
-            Navigator.of(context)
-                .push(MaterialPageRoute(builder: (_) => CategoryScreen()));
-          },
-        ),
+      body: ListView(
+        children: <Widget>[
+          ListTile(
+            title: Text('Open first category'),
+            onTap: () {
+              // Pushs the SecondScreen widget onto the navigation stack
+              Navigator.of(context).push(
+                EnterExitRoute(
+                  exitPage: this,
+                  enterPage: FirstCategoryScreen(),
+                ),
+              );
+            },
+          ),
+        ],
       ),
     );
   }
