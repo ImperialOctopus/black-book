@@ -13,11 +13,11 @@ class Model {
     _box = await Hive.openBox('black-book');
   }
 
-  Item getItem(int id) {
+  Item getItem(String id) {
     return _box.get(id, defaultValue: Item());
   }
 
-  void setItem(int id, Item item) {
+  void setItem(String id, Item item) {
     _box.put(id, item);
   }
 }
