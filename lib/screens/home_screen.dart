@@ -1,7 +1,7 @@
 import 'package:black_book/routes/enter_exit_route.dart';
 import 'package:flutter/material.dart';
 
-import 'categories/first_category_screen.dart';
+import 'categories/first/category_first.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
               Navigator.of(context).push(
                 EnterExitRoute(
                   exitPage: this,
-                  enterPage: FirstCategoryScreen(),
+                  enterPage: CategoryFirst(),
                 ),
               );
             },
