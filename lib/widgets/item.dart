@@ -1,20 +1,19 @@
-import 'package:black_book/model/item.dart';
 import 'package:black_book/model/model.dart';
 import 'package:flutter/material.dart';
 
-class ItemDuck extends StatefulWidget {
+class Item extends StatefulWidget {
   final Model model;
-  ItemDuck({Key key, this.model}) : super(key: key);
+  Item({Key key, this.model}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
-    return _ItemDuckState(model: model);
+    return _ItemState(model: model);
   }
 }
 
-class _ItemDuckState extends State<ItemDuck> {
+class _ItemState extends State<Item> {
   final Model model;
-  _ItemDuckState({this.model});
+  _ItemState({this.model});
 
   @override
   Widget build(BuildContext context) {

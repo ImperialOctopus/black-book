@@ -1,7 +1,4 @@
-import 'package:black_book/routes/enter_exit_route.dart';
 import 'package:flutter/material.dart';
-
-import 'categories/first/category_first.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -17,10 +14,7 @@ class HomeScreen extends StatelessWidget {
             onTap: () {
               // Pushs the SecondScreen widget onto the navigation stack
               Navigator.of(context).push(
-                EnterExitRoute(
-                  exitPage: this,
-                  enterPage: CategoryFirst(),
-                ),
+                CategoryDog(),
               );
             },
           ),

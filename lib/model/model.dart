@@ -13,11 +13,11 @@ class Model {
     _box = await Hive.openBox('black-book');
   }
 
-  Item getItem(String id) {
-    return _box.get(id, defaultValue: Item());
+  List<int> getProgress(Item item) {
+    return _box.get(item.reference, defaultValue: [0, 0, 0]);
   }
 
-  void setItem(String id, Item item) {
-    _box.put(id, item);
+  void setProgress(Item item, List<int> progress) {
+    _box.put(item.reference, progress);
   }
 }
