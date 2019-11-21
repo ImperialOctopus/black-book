@@ -1,16 +1,17 @@
-import 'dart:io';
-
 import 'package:hive/hive.dart';
+import 'package:path_provider/path_provider.dart' as path_provider;
 
 import 'item.dart';
 
 class Model {
   Box _box;
 
-  void init() async {
-    var path = Directory.current.path;
-    Hive.init(path);
+  Future<Model> init() async {
+    //final appDocumentDir = await path_provider.getApplicationDocumentsDirectory();
+    //Hive.init(appDocumentDir.path);
+
     _box = await Hive.openBox('black-book');
+    return this;
   }
 
   List<int> getProgress(Item item) {
