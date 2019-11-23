@@ -58,7 +58,7 @@ class CategoryDataDog {
         ],
       ),
       Subcategory(
-        name: 'Urogenital',
+        name: 'Urogenital System',
         icon: Icon(MdiIcons.toilet),
         items: [
           Item(

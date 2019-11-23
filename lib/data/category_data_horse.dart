@@ -70,7 +70,7 @@ class CategoryDataHorse {
         ],
       ),
       Subcategory(
-        name: 'Urogenital',
+        name: 'Urogenital System',
         icon: Icon(MdiIcons.toilet),
         items: [
           Item(
