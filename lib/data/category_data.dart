@@ -1,9 +1,12 @@
 import '../model/category.dart';
-import 'category_data_bread.dart';
 import 'category_data_cattle.dart';
 import 'category_data_dog.dart';
 import 'category_data_cat.dart';
+import 'category_data_exotic.dart';
 import 'category_data_horse.dart';
+import 'category_data_lab.dart';
+import 'category_data_pigs.dart';
+import 'category_data_sheep.dart';
 
 class CategoryData {
   static const List<Category> categoryList = [
@@ -11,6 +14,9 @@ class CategoryData {
     CategoryDataCat.data,
     CategoryDataHorse.data,
     CategoryDataCattle.data,
-    CategoryDataBread.data,
+    CategoryDataSheep.data,
+    CategoryDataPigs.data,
+    CategoryDataExotic.data,
+    CategoryDataLab.data,
   ];
 }
