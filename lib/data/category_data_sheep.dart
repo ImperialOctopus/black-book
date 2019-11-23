@@ -5,7 +5,7 @@ import '../model/category.dart';
 import '../model/item.dart';
 import '../model/subcategory.dart';
 
-class CategoryDataBread {
+class CategoryDataSheep {
   static const Category data = Category(
     name: 'Sheep & Goats',
     subcategories: [
