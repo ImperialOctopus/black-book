@@ -1,14 +1,13 @@
 import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart' as path_provider;
 
-import 'item.dart';
-
 class Model {
   Box _box;
 
   Future<Model> init() async {
-    //final appDocumentDir = await path_provider.getApplicationDocumentsDirectory();
-    //Hive.init(appDocumentDir.path);
+    final appDocumentDir =
+        await path_provider.getApplicationDocumentsDirectory();
+    Hive.init(appDocumentDir.path);
 
     _box = await Hive.openBox('black-book');
     return this;

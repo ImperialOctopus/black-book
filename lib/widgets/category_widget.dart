@@ -27,10 +27,9 @@ class _CategoryWidgetState extends State<CategoryWidget> {
       appBar: AppBar(
         title: Text(category.name),
       ),
-      body: ListView.builder(
-        itemCount: category.subcategories.length,
-        itemBuilder: (BuildContext context, int index) =>
-            buildSubcategory(category.subcategories[index]),
+      body: ListView(
+        children: List<Widget>.generate(category.subcategories.length,
+            (int i) => buildSubcategory(category.subcategories[i])),
       ),
     );
   }
@@ -48,12 +47,8 @@ class _CategoryWidgetState extends State<CategoryWidget> {
                   )
                 ]
               : null),
-          ListView.builder(
-            shrinkWrap: true,
-            itemCount: subcategory.items.length,
-            itemBuilder: (BuildContext context, int index) =>
-                buildListItem(subcategory.items[index]),
-          ),
+          ...List<Widget>.generate(subcategory.items.length,
+              (int i) => buildListItem(subcategory.items[i]))
         ],
       ),
     );
