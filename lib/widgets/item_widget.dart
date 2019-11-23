@@ -1,6 +1,7 @@
-import 'package:black_book/model/item.dart';
-import 'package:black_book/model/model.dart';
 import 'package:flutter/material.dart';
+
+import '../model/item.dart';
+import '../model/model.dart';
 
 class ItemWidget extends StatefulWidget {
   final Model model;

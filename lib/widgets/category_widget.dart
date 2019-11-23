@@ -1,9 +1,10 @@
-import 'package:black_book/model/category.dart';
-import 'package:black_book/model/item.dart';
-import 'package:black_book/model/model.dart';
-import 'package:black_book/model/subcategory.dart';
-import 'package:black_book/widgets/progress_icon_widget.dart';
 import 'package:flutter/material.dart';
+
+import '../model/category.dart';
+import '../model/item.dart';
+import '../model/model.dart';
+import '../model/subcategory.dart';
+import 'progress_icon_widget.dart';
 
 class CategoryWidget extends StatefulWidget {
   final Model model;

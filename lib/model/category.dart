@@ -1,5 +1,6 @@
-import 'package:black_book/model/subcategory.dart';
 import 'package:flutter/material.dart';
+
+import 'subcategory.dart';
 
 class Category {
   final String name;

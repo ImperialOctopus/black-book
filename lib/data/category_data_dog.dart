@@ -203,7 +203,7 @@ class CategoryDataDog {
       ),
       Subcategory(
         name: 'Locomotor System',
-        icon: Icon(MdiIcons.armFlex),
+        icon: Icon(MdiIcons.armFlexOutline),
         items: [
           Item(
             name: 'Evaluation of lameness',
@@ -461,7 +461,7 @@ class CategoryDataDog {
         items: [
           Item(
             name: 'IV fluid administration',
-            reference: 'dog_ic_ivfluid',
+            reference: 'dog_ic_iv_fluid',
           ),
           Item(
             name: 'Enteral (nasopharyngeal intubation)',

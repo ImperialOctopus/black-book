@@ -1,9 +1,10 @@
-import 'package:black_book/data/category_data.dart';
-import 'package:black_book/model/category.dart';
-import 'package:black_book/model/model.dart';
-import 'package:black_book/routes/slide_left_route.dart';
-import 'package:black_book/widgets/category_widget.dart';
 import 'package:flutter/material.dart';
+
+import '../data/category_data.dart';
+import '../model/category.dart';
+import '../model/model.dart';
+import '../routes/slide_left_route.dart';
+import '../widgets/category_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   final Model model;
