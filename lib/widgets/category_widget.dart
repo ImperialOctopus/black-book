@@ -1,11 +1,7 @@
 import 'package:black_book/model/category.dart';
-import 'package:black_book/model/item.dart';
 import 'package:black_book/model/model.dart';
-import 'package:black_book/routes/slide_left_route.dart';
 import 'package:black_book/widgets/progress_icon_widget.dart';
 import 'package:flutter/material.dart';
-
-import 'item_widget.dart';
 
 class CategoryWidget extends StatefulWidget {
   final Model model;
@@ -32,21 +28,57 @@ class _CategoryWidgetState extends State<CategoryWidget> {
       body: ListView.builder(
         itemCount: category.items.length,
         itemBuilder: (BuildContext context, int index) {
-          Item _item = category.items[index];
-          List<int> _progress = model.getProgress(_item);
+          List<int> _progress = category.items[index].progress;
           return ListTile(
-            title: Text(_item.name),
-            trailing: Row(children: <Widget>[
-              ProgressIconWidget.fromInt(_progress[0]),
-              
-            ],),
-            onLongPress: () {
+            title: Text(category.items[index].name),
+            trailing: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                IconButton(
+                  icon: ProgressIconWidget.intMap[_progress[0]],
+                  onPressed: () => setState(
+                    () {
+                      _progress[0] += 1;
+                      if (_progress[0] > 2) {
+                        _progress[0] = 0;
+                      }
+                      category.items[index].progress = _progress;
+                    },
+                  ),
+                ),
+                IconButton(
+                  icon: ProgressIconWidget.intMap[_progress[1]],
+                  onPressed: () => setState(
+                    () {
+                      _progress[1] += 1;
+                      if (_progress[1] > 2) {
+                        _progress[1] = 0;
+                      }
+                      category.items[index].progress = _progress;
+                    },
+                  ),
+                ),
+                IconButton(
+                  icon: ProgressIconWidget.intMap[_progress[2]],
+                  onPressed: () => setState(
+                    () {
+                      _progress[2] += 1;
+                      if (_progress[2] > 2) {
+                        _progress[2] = 0;
+                      }
+                      category.items[index].progress = _progress;
+                    },
+                  ),
+                ),
+              ],
+            ),
+            /*onLongPress: () {
               Navigator.of(context).push(
                 SlideLeftRoute(
-                  page: ItemWidget(model: model, item: _item),
+                  page: ItemWidget(model: model, item: category.items[index]),
                 ),
               );
-            },
+            },*/
           );
         },
       ),

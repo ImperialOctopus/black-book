@@ -7,44 +7,52 @@ import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
   final Model model;
-  HomeScreen({Key key, this.model}) : super(key: key);
+  final List<Category> categories;
 
-  static const List<Category> categories = [
-    Category(
-      name: 'Dog Category',
-      items: [
-        Item(
-          name: 'First Item',
-          reference: 'dog_first',
-        ),
-        Item(
-          name: 'Second Item',
-          reference: 'dog_second',
-        ),
-        Item(
-          name: 'Last Item',
-          reference: 'dog_third',
-        ),
-      ],
-    ),
-    Category(
-      name: 'Category of Bread',
-      items: [
-        Item(
-          name: 'Bread One',
-          reference: 'bread_one',
-        ),
-        Item(
-          name: 'Additional Bread',
-          reference: 'bread_two',
-        ),
-        Item(
-          name: 'Final Bread',
-          reference: 'bread_third',
-        ),
-      ],
-    ),
-  ];
+  HomeScreen({Key key, this.model})
+      : categories = [
+          Category(
+            name: 'Dog Category',
+            items: [
+              Item(
+                model: model,
+                name: 'First Item',
+                reference: 'dog_first',
+              ),
+              Item(
+                model: model,
+                name: 'Second Item',
+                reference: 'dog_second',
+              ),
+              Item(
+                model: model,
+                name: 'Last Item',
+                reference: 'dog_third',
+              ),
+            ],
+          ),
+          Category(
+            name: 'Category of Bread',
+            items: [
+              Item(
+                model: model,
+                name: 'Bread One',
+                reference: 'bread_one',
+              ),
+              Item(
+                model: model,
+                name: 'Additional Bread',
+                reference: 'bread_two',
+              ),
+              Item(
+                model: model,
+                name: 'Final Bread',
+                reference: 'bread_third',
+              ),
+            ],
+          ),
+        ],
+        super(key: key);
 
   @override
   Widget build(BuildContext context) {

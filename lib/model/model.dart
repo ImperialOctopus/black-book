@@ -14,11 +14,11 @@ class Model {
     return this;
   }
 
-  List<int> getProgress(Item item) {
-    return _box.get(item.reference, defaultValue: [0, 0, 0]);
+  List<int> getProgress(String reference) {
+    return List<int>.from(_box.get(reference, defaultValue: [0, 0, 0]));
   }
 
-  void setProgress(Item item, List<int> progress) {
-    _box.put(item.reference, progress);
+  void setProgress(String reference, List<int> progress) {
+    _box.put(reference, progress);
   }
 }
