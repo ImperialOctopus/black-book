@@ -58,7 +58,10 @@ class _CategoryWidgetState extends State<CategoryWidget> {
   Widget buildListItem(Item item) {
     List<int> _progress = item.getProgress(model);
     return ListTile(
-      title: Text(item.name),
+      title: Text(
+        item.name,
+        style: item.important ? TextStyle(fontStyle: FontStyle.italic) : null,
+      ),
       trailing: Row(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
