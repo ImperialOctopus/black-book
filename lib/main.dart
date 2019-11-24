@@ -49,11 +49,13 @@ class _MainAppState extends State<MainApp> {
           builder: (BuildContext context, AsyncSnapshot<Model> snapshot) {
             if (snapshot.connectionState == ConnectionState.done) {
               return HomeScreen(model: snapshot.data);
-            } else if (snapshot.hasError) {
+            }
+            /*else if (snapshot.hasError) {
               return Text('Error: ${snapshot.error}');
-            } else {
-              return Text(snapshot.connectionState.toString());
-              //return Center(child: CircularProgressIndicator());
+            } */
+            else {
+              //return Text(snapshot.connectionState.toString());
+              return Center(child: CircularProgressIndicator());
             }
           }),
     );
