@@ -12,7 +12,7 @@ class CategoryDataLab {
     subcategories: [
       Subcategory(
         name: 'Laboratory Tests',
-        icon: Icon(MdiIcons.beaker),
+        icon: Icon(MdiIcons.microscope),
         items: [
           Item(
             name: 'Routine haematology',
