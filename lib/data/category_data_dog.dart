@@ -15,11 +15,13 @@ class CategoryDataDog {
         icon: Icon(MdiIcons.stomach),
         items: [
           Item(
-            name: 'Rectal examination (essential!)',
+            name: 'Rectal examination',
+            essential: true,
             reference: 'dog_alimentary_rectal',
           ),
           Item(
-            name: 'Express anal sacs (essential!)',
+            name: 'Express anal sacs',
+            essential: true,
             reference: 'dog_alimentary_anal',
           ),
           Item(
@@ -64,26 +66,32 @@ class CategoryDataDog {
         items: [
           Item(
             name: 'Urinary catheterisation (male)',
+            essential: true,
             reference: 'dog_urogenital_catheter_male',
           ),
           Item(
             name: 'Urinary catheterisation (female)',
+            essential: true,
             reference: 'dog_urogenital_catheter_female',
           ),
           Item(
             name: 'Cystocentesis',
+            essential: true,
             reference: 'dog_urogenital_cystocentesis',
           ),
           Item(
             name: 'Urine sample collection',
+            essential: true,
             reference: 'dog_urogenital_sample',
           ),
           Item(
             name: 'Castration',
+            essential: true,
             reference: 'dog_urogenital_castration',
           ),
           Item(
             name: 'Spaying',
+            essential: true,
             reference: 'dog_urogenital_spay',
           ),
           Item(
@@ -164,14 +172,17 @@ class CategoryDataDog {
         items: [
           Item(
             name: 'Use of penlight',
+            essential: true,
             reference: 'dog_eyes_penlight',
           ),
           Item(
             name: 'Use of direct ophthalmoscope',
+            essential: true,
             reference: 'dog_eyes_scope',
           ),
           Item(
             name: 'Use of fluorescein',
+            essential: true,
             reference: 'dog_eyes_fluorescein',
           ),
           Item(
@@ -208,10 +219,12 @@ class CategoryDataDog {
         items: [
           Item(
             name: 'Evaluation of lameness',
+            essential: true,
             reference: 'dog_locomotor_lameness',
           ),
           Item(
             name: 'Nail clipping',
+            essential: true,
             reference: 'dog_locomotor_nails',
           ),
           Item(
@@ -254,6 +267,7 @@ class CategoryDataDog {
         items: [
           Item(
             name: 'Complete neurological examination',
+            essential: true,
             reference: 'dog_nervous_neuro',
           ),
           Item(
@@ -272,6 +286,7 @@ class CategoryDataDog {
         items: [
           Item(
             name: 'Examination of the mouth',
+            essential: true,
             reference: 'dog_oral_exam',
           ),
           Item(
@@ -310,14 +325,17 @@ class CategoryDataDog {
         items: [
           Item(
             name: 'Sedation & tranquillisation',
+            essential: true,
             reference: 'dog_restraint_chemical',
           ),
           Item(
             name: 'Manual restraint',
+            essential: true,
             reference: 'dog_restraint_manual',
           ),
           Item(
             name: 'Use of a muzzle',
+            essential: true,
             reference: 'dog_restraint_muzzle',
           ),
         ],
@@ -328,18 +346,22 @@ class CategoryDataDog {
         items: [
           Item(
             name: 'Intravenous',
+            essential: true,
             reference: 'dog_ga_iv',
           ),
           Item(
             name: 'Inhalational',
+            essential: true,
             reference: 'dog_ga_inhale',
           ),
           Item(
             name: 'Endotracheal intubation',
+            essential: true,
             reference: 'dog_ga_intubation',
           ),
           Item(
             name: 'Local anaesthesia',
+            essential: true,
             reference: 'dog_ga_local',
           ),
           Item(
@@ -354,14 +376,17 @@ class CategoryDataDog {
         items: [
           Item(
             name: 'Skin scraping',
+            essential: true,
             reference: 'dog_ears_scrape',
           ),
           Item(
             name: 'Use of Woods lamp',
+            essential: true,
             reference: 'dog_ears_woods',
           ),
           Item(
             name: 'Use of otoscope',
+            essential: true,
             reference: 'dog_ears_otoscope',
           ),
           Item(
@@ -408,42 +433,52 @@ class CategoryDataDog {
         items: [
           Item(
             name: 'Intravenous catheterisation',
+            essential: true,
             reference: 'dog_general_iv_catheter',
           ),
           Item(
             name: 'Vaccination',
+            essential: true,
             reference: 'dog_general_vaccination',
           ),
           Item(
             name: 'Parenteral administration of drugs',
+            essential: true,
             reference: 'dog_general_parenteral',
           ),
           Item(
             name: 'Microchipping',
+            essential: true,
             reference: 'dog_general_microchip',
           ),
           Item(
             name: 'Euthanasia',
+            essential: true,
             reference: 'dog_general_euthanasia',
           ),
           Item(
             name: 'Skin suturing',
+            essential: true,
             reference: 'dog_general_suture',
           ),
           Item(
             name: 'Wound management (surgical)',
+            essential: true,
             reference: 'dog_general_wound_surgical',
           ),
           Item(
             name: 'Management of traumatic wound',
+            essential: true,
             reference: 'dog_general_wound_traumatic',
           ),
           Item(
             name: 'Bandaging',
+            essential: true,
             reference: 'dog_general_bandage',
           ),
           Item(
             name: 'Road traffic accident management',
+            essential: true,
             reference: 'dog_general_road',
           ),
           Item(
@@ -462,10 +497,12 @@ class CategoryDataDog {
         items: [
           Item(
             name: 'IV fluid administration',
+            essential: true,
             reference: 'dog_ic_iv_fluid',
           ),
           Item(
             name: 'Enteral (nasopharyngeal intubation)',
+            essential: true,
             reference: 'dog_ic_enteral_naso',
           ),
           Item(

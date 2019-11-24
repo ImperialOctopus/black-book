@@ -60,7 +60,7 @@ class _CategoryWidgetState extends State<CategoryWidget> {
     return ListTile(
       title: Text(
         item.name,
-        style: item.important ? TextStyle(fontStyle: FontStyle.italic) : null,
+        style: item.essential ? TextStyle(fontStyle: FontStyle.italic) : null,
       ),
       trailing: Row(
         mainAxisSize: MainAxisSize.min,

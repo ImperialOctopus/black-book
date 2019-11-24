@@ -16,22 +16,27 @@ class CategoryDataCattle {
         items: [
           Item(
             name: 'Oral examination & use of gag',
+            essential: true,
             reference: 'cattle_alimentary_exam_oral',
           ),
           Item(
             name: 'Examination of abdomen',
+            essential: true,
             reference: 'cattle_alimentary_exam_abdomen',
           ),
           Item(
             name: 'Displaced abomasum (rolling)',
+            essential: true,
             reference: 'cattle_alimentary_abomasum_roll',
           ),
           Item(
             name: 'Displaced abomasum (surgery)',
+            essential: true,
             reference: 'cattle_alimentary_abomasum_surgery',
           ),
           Item(
             name: 'Rehydration (oral)',
+            essential: true,
             reference: 'cattle_alimentary_rehydration_oral',
           ),
           Item(
@@ -40,6 +45,7 @@ class CategoryDataCattle {
           ),
           Item(
             name: 'Oral administration of medication',
+            essential: true,
             reference: 'cattle_alimentary_medication_oral',
           ),
           Item(
@@ -66,46 +72,57 @@ class CategoryDataCattle {
         items: [
           Item(
             name: 'Observe normal calving',
+            essential: true,
             reference: 'cattle_urogenital_parturition',
           ),
           Item(
             name: 'Herd infertility (record analysis)',
+            essential: true,
             reference: 'cattle_urogenital_herd_infertility',
           ),
           Item(
             name: 'Pregnancy diagnosis (manual)',
+            essential: true,
             reference: 'cattle_urogenital_pregnancy_manual',
           ),
           Item(
             name: 'Pregnancy diagnosis (ultrasound)',
+            essential: true,
             reference: 'cattle_urogenital_pregnancy_ultra',
           ),
           Item(
             name: 'Abortion procedures',
+            essential: true,
             reference: 'cattle_urogenital_abortion',
           ),
           Item(
             name: 'Retained foetal membranes',
+            essential: true,
             reference: 'cattle_urogenital_retained_membrane',
           ),
           Item(
             name: 'Dystocia',
+            essential: true,
             reference: 'cattle_urogenital_dystocia',
           ),
           Item(
             name: 'Caesarean section',
+            essential: true,
             reference: 'cattle_urogenital_caesarean',
           ),
           Item(
             name: 'Uterine catheterisation',
+            essential: true,
             reference: 'cattle_urogenital_catherer_uterine',
           ),
           Item(
             name: 'Castration (surgical)',
+            essential: true,
             reference: 'cattle_urogenital_castration_surgical',
           ),
           Item(
             name: 'Castration (Burdizzo)',
+            essential: true,
             reference: 'cattle_urogenital_castration_burdizzo',
           ),
           Item(
@@ -152,10 +169,12 @@ class CategoryDataCattle {
         items: [
           Item(
             name: 'Examination of thorax (adult)',
+            essential: true,
             reference: 'cattle_thorax_exam_adult',
           ),
           Item(
             name: 'Examination of thorax (calf)',
+            essential: true,
             reference: 'cattle_thorax_exam_calf',
           ),
           Item(
@@ -174,22 +193,27 @@ class CategoryDataCattle {
         items: [
           Item(
             name: 'Evaluation of lameness',
+            essential: true,
             reference: 'cattle_locomotor_lame_eval',
           ),
           Item(
             name: 'Examine lame foot',
+            essential: true,
             reference: 'cattle_locomotor_lame_exam',
           ),
           Item(
             name: 'Pare lame foot',
+            essential: true,
             reference: 'cattle_locomotor_lame_pare',
           ),
           Item(
             name: 'Foot trimming',
+            essential: true,
             reference: 'cattle_locomotor_foot_trim',
           ),
           Item(
             name: 'Apply foot block',
+            essential: true,
             reference: 'cattle_locomotor_foot_block',
           ),
           Item(
@@ -236,10 +260,12 @@ class CategoryDataCattle {
         items: [
           Item(
             name: 'Sedation & tranquillisation',
+            essential: true,
             reference: 'cattle_anaesthesia_sedation',
           ),
           Item(
             name: 'Local anaesthesia (infiltration)',
+            essential: true,
             reference: 'cattle_anaesthesia_local',
           ),
           Item(
@@ -262,14 +288,17 @@ class CategoryDataCattle {
         items: [
           Item(
             name: 'Use of pen torch',
+            essential: true,
             reference: 'cattle_eyes_torch',
           ),
           Item(
             name: 'Use of ophthalmoscope',
+            essential: true,
             reference: 'cattle_eyes_scope',
           ),
           Item(
             name: 'Subconjuctival injection',
+            essential: true,
             reference: 'cattle_eyes_inject',
           ),
         ],
@@ -280,46 +309,57 @@ class CategoryDataCattle {
         items: [
           Item(
             name: 'Condition scoring',
+            essential: true,
             reference: 'cattle_general_condition',
           ),
           Item(
             name: 'Disbudding',
+            essential: true,
             reference: 'cattle_general_disbud',
           ),
           Item(
             name: 'Dehorning',
+            essential: true,
             reference: 'cattle_general_dehorn',
           ),
           Item(
             name: 'Physical restraint',
+            essential: true,
             reference: 'cattle_general_restraint',
           ),
           Item(
             name: 'Parenteral administration of drugs',
+            essential: true,
             reference: 'cattle_general_drugs_parenteral',
           ),
           Item(
             name: 'Casualty slaughter certification',
+            essential: true,
             reference: 'cattle_general_cert_casualty',
           ),
           Item(
             name: 'Storage, use, recording, disposal of medicines on farm',
+            essential: true,
             reference: 'cattle_general_farm_medicines',
           ),
           Item(
             name: 'Mastitis investigation (individual)',
+            essential: true,
             reference: 'cattle_general_mastitis_single',
           ),
           Item(
             name: 'Mastitis investigation (herd)',
+            essential: true,
             reference: 'cattle_general_mastitis_herd',
           ),
           Item(
             name: 'TB testing',
+            essential: true,
             reference: 'cattle_general_tb',
           ),
           Item(
             name: 'Wound management',
+            essential: true,
             reference: 'cattle_general_wound_manage',
           ),
           Item(
@@ -354,14 +394,17 @@ class CategoryDataCattle {
         items: [
           Item(
             name: 'Urine',
+            essential: true,
             reference: 'cattle_lab_urine',
           ),
           Item(
             name: 'Milk',
+            essential: true,
             reference: 'cattle_lab_milk',
           ),
           Item(
             name: 'Blood (inc. Brucellosis testing)',
+            essential: true,
             reference: 'cattle_lab_blood',
           ),
           Item(

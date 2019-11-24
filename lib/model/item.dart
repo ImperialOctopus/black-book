@@ -4,12 +4,12 @@ import 'model.dart';
 
 class Item {
   final String name;
-  final bool important;
+  final bool essential;
   final String reference;
 
   const Item({
     @required this.name,
-    this.important = false,
+    this.essential = false,
     @required this.reference,
   });
 

@@ -16,6 +16,7 @@ class CategoryDataExotic {
         items: [
           Item(
             name: 'General examination',
+            essential: true,
             reference: 'exotic_rabbit_exam',
           ),
           Item(
@@ -62,6 +63,7 @@ class CategoryDataExotic {
         items: [
           Item(
             name: 'General examination',
+            essential: true,
             reference: 'exotic_guinea_exam',
           ),
           Item(
@@ -88,14 +90,17 @@ class CategoryDataExotic {
         items: [
           Item(
             name: 'General examination (rats)',
+            essential: true,
             reference: 'exotic_rodent_exam_rat',
           ),
           Item(
             name: 'General examination (mice)',
+            essential: true,
             reference: 'exotic_rodent_exam_mouse',
           ),
           Item(
             name: 'General examination (hamsters)',
+            essential: true,
             reference: 'exotic_rodent_exam_hamster',
           ),
           Item(
@@ -114,6 +119,7 @@ class CategoryDataExotic {
         items: [
           Item(
             name: 'General examination',
+            essential: true,
             reference: 'exotic_bird_exam',
           ),
           Item(
@@ -140,6 +146,7 @@ class CategoryDataExotic {
         items: [
           Item(
             name: 'General examination',
+            essential: true,
             reference: 'exotic_reptile_exam',
           ),
           Item(

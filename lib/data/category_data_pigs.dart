@@ -16,38 +16,47 @@ class CategoryDataPigs {
         items: [
           Item(
             name: 'History taking',
+            essential: true,
             reference: 'pigs_clinical_history',
           ),
           Item(
             name: 'General observations (herd)',
+            essential: true,
             reference: 'pigs_clinical_observe_herd',
           ),
           Item(
             name: 'General observations (individual)',
+            essential: true,
             reference: 'pigs_clinical_observe_single',
           ),
           Item(
             name: 'Temperature / heart rate / respiration',
+            essential: true,
             reference: 'pigs_clinical_tpr',
           ),
           Item(
             name: 'Examination (mouth)',
+            essential: true,
             reference: 'pigs_clinical_exam_mouth',
           ),
           Item(
             name: 'Examination (thorax)',
+            essential: true,
             reference: 'pigs_clinical_exam_thorax',
           ),
           Item(
             name: 'Examination (abdomen)',
+            essential: true,
             reference: 'pigs_clinical_exam_abdomen',
           ),
           Item(
             name: 'Examination (locomotor system)',
+            essential: true,
             reference: 'pigs_clinical_exam_locomotor',
           ),
           Item(
             name: 'Condition scoring',
+            essential: true,
             reference: 'pigs_clinical_condition',
           ),
           Item(
@@ -70,22 +79,27 @@ class CategoryDataPigs {
         items: [
           Item(
             name: 'Piglets',
+            essential: true,
             reference: 'pigs_restraint_piglet',
           ),
           Item(
             name: 'Growers',
+            essential: true,
             reference: 'pigs_restraint_grower',
           ),
           Item(
             name: 'Finishers',
+            essential: true,
             reference: 'pigs_restraint_finisher',
           ),
           Item(
             name: 'Sow',
+            essential: true,
             reference: 'pigs_restraint_sow',
           ),
           Item(
             name: 'Boar',
+            essential: true,
             reference: 'pigs_restraint_boar',
           ),
         ],

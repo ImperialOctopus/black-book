@@ -16,26 +16,32 @@ class CategoryDataHorse {
         items: [
           Item(
             name: 'Oral examination & use of gag',
+            essential: true,
             reference: 'horse_alimentary_oral_exam',
           ),
           Item(
             name: 'Teeth (age)',
+            essential: true,
             reference: 'horse_alimentary_teeth_age',
           ),
           Item(
             name: 'Teeth (rasp)',
+            essential: true,
             reference: 'horse_alimentary_teeth_rasp',
           ),
           Item(
             name: 'Oral administration of paste',
+            essential: true,
             reference: 'horse_alimentary_paste',
           ),
           Item(
             name: 'Examination of colic (medical)',
+            essential: true,
             reference: 'horse_alimentary_colic_medical',
           ),
           Item(
             name: 'Nasogastric intubation',
+            essential: true,
             reference: 'horse_alimentary_intubation',
           ),
           Item(
@@ -54,6 +60,7 @@ class CategoryDataHorse {
         items: [
           Item(
             name: 'External examination/palpation',
+            essential: true,
             reference: 'horse_respiratory_external',
           ),
           Item(
@@ -76,26 +83,32 @@ class CategoryDataHorse {
         items: [
           Item(
             name: 'Vaginal examination',
+            essential: true,
             reference: 'horse_urogenital_exam_vaginal',
           ),
           Item(
             name: 'Uterine & cervical swab',
+            essential: true,
             reference: 'horse_urogenital_swab_uterine',
           ),
           Item(
             name: 'Clitoral swab',
+            essential: true,
             reference: 'horse_urogenital_swab_clitoral',
           ),
           Item(
             name: 'Urethral catheterisation (male)',
+            essential: true,
             reference: 'horse_urogenital_catheter_male',
           ),
           Item(
             name: 'Urethral catheterisation (female)',
+            essential: true,
             reference: 'horse_urogenital_catheter_female',
           ),
           Item(
             name: 'Urine sample collection',
+            essential: true,
             reference: 'horse_urogenital_urine',
           ),
           Item(
@@ -150,26 +163,32 @@ class CategoryDataHorse {
         items: [
           Item(
             name: 'Evaluation of lameness',
+            essential: true,
             reference: 'horse_locomotor_lame',
           ),
           Item(
             name: 'Examination of limb & foot',
+            essential: true,
             reference: 'horse_locomotor_exam_foot',
           ),
           Item(
             name: 'Removal of shoe',
+            essential: true,
             reference: 'horse_locomotor_shoe_remove',
           ),
           Item(
             name: 'Paring of foot & use of hoof testers',
+            essential: true,
             reference: 'horse_locomotor_paring',
           ),
           Item(
             name: 'Evaluation of gait',
+            essential: true,
             reference: 'horse_locomotor_gait',
           ),
           Item(
             name: 'Flexion tests',
+            essential: true,
             reference: 'horse_locomotor_flexion',
           ),
           Item(
@@ -200,10 +219,12 @@ class CategoryDataHorse {
         items: [
           Item(
             name: 'Cardiac auscultation',
+            essential: true,
             reference: 'horse_thorax_ausc_cardiac',
           ),
           Item(
             name: 'Lung auscultation',
+            essential: true,
             reference: 'horse_thorax_ausc_lung',
           ),
           Item(
@@ -248,10 +269,12 @@ class CategoryDataHorse {
         items: [
           Item(
             name: 'Collection of hair pluck',
+            essential: true,
             reference: 'horse_skin_hair',
           ),
           Item(
             name: 'Collection of skin scraping',
+            essential: true,
             reference: 'horse_skin_scrape',
           ),
           Item(
@@ -266,10 +289,12 @@ class CategoryDataHorse {
         items: [
           Item(
             name: 'Use of pen torch',
+            essential: true,
             reference: 'horse_eyes_torch',
           ),
           Item(
             name: 'Use of opthalmoscope',
+            essential: true,
             reference: 'horse_eyes_scope',
           ),
           Item(
@@ -284,10 +309,12 @@ class CategoryDataHorse {
         items: [
           Item(
             name: 'Sedation & tranquillisation',
+            essential: true,
             reference: 'horse_restraint_chemical',
           ),
           Item(
             name: 'Use of a twitch',
+            essential: true,
             reference: 'horse_restraint_twitch',
           ),
           Item(
@@ -302,14 +329,17 @@ class CategoryDataHorse {
         items: [
           Item(
             name: 'Total IV anaesthesia',
+            essential: true,
             reference: 'horse_ga_iv',
           ),
           Item(
             name: 'Intubation of trachea',
+            essential: true,
             reference: 'horse_ga_intubation',
           ),
           Item(
             name: 'Inhalation anaesthesia',
+            essential: true,
             reference: 'horse_ga_inhalation',
           ),
         ],
@@ -320,22 +350,27 @@ class CategoryDataHorse {
         items: [
           Item(
             name: 'Vaccination',
+            essential: true,
             reference: 'horse_general_vaccination',
           ),
           Item(
             name: 'Parenteral administration of drugs',
+            essential: true,
             reference: 'horse_general_drugs_parenteral',
           ),
           Item(
             name: 'Observe examination for purchase',
+            essential: true,
             reference: 'horse_general_exam_purchase',
           ),
           Item(
             name: 'Euthanasia',
+            essential: true,
             reference: 'horse_general_euthanasia',
           ),
           Item(
             name: 'Wound management & suturing',
+            essential: true,
             reference: 'horse_general_wound_suture',
           ),
           Item(

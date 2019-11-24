@@ -16,42 +16,52 @@ class CategoryDataSheep {
         items: [
           Item(
             name: 'History taking',
+            essential: true,
             reference: 'sheep_clinical_history',
           ),
           Item(
             name: 'General observation (flock)',
+            essential: true,
             reference: 'sheep_clinical_observe_flock',
           ),
           Item(
             name: 'General observation (individual)',
+            essential: true,
             reference: 'sheep_clinical_observe_single',
           ),
           Item(
             name: 'Temperature, pulse, respiration',
+            essential: true,
             reference: 'sheep_clinical_tpr',
           ),
           Item(
             name: 'Examination (mouth)',
+            essential: true,
             reference: 'sheep_clinical_exam_mouth',
           ),
           Item(
             name: 'Examination (thorax)',
+            essential: true,
             reference: 'sheep_clinical_exam_thorax',
           ),
           Item(
             name: 'Examination (abdomen)',
+            essential: true,
             reference: 'sheep_clinical_exam_abdomen',
           ),
           Item(
             name: 'Examination (locomotor system)',
+            essential: true,
             reference: 'sheep_clinical_exam_locomotor',
           ),
           Item(
             name: 'Examination (lymph nodes)',
+            essential: true,
             reference: 'sheep_clinical_exam_lymph',
           ),
           Item(
             name: 'Examination (udder)',
+            essential: true,
             reference: 'sheep_clinical_exam_udder',
           ),
         ],
@@ -62,18 +72,22 @@ class CategoryDataSheep {
         items: [
           Item(
             name: 'Examination of incisors/molars',
+            essential: true,
             reference: 'sheep_alimentary_exam',
           ),
           Item(
             name: 'Stomach intubation (lamb)',
+            essential: true,
             reference: 'sheep_alimentary_intubation',
           ),
           Item(
             name: 'Anthelminthics by dosing gun',
+            essential: true,
             reference: 'sheep_alimentary_anthelmintic',
           ),
           Item(
             name: 'Rehydration (oral)',
+            essential: true,
             reference: 'sheep_alimentary_rehydration_oral',
           ),
           Item(
@@ -92,18 +106,22 @@ class CategoryDataSheep {
         items: [
           Item(
             name: 'Fertility examination',
+            essential: true,
             reference: 'sheep_urogenital_male_exam',
           ),
           Item(
             name: 'Castration (surgical)',
+            essential: true,
             reference: 'sheep_urogenital_male_castration_surgical',
           ),
           Item(
             name: 'Castration (rubber ring)',
+            essential: true,
             reference: 'sheep_urogenital_male_castration_ring',
           ),
           Item(
             name: 'Castration (Burdizzo)',
+            essential: true,
             reference: 'sheep_urogenital_male_castration_burdizzo',
           ),
           Item(
@@ -126,30 +144,37 @@ class CategoryDataSheep {
         items: [
           Item(
             name: 'Flock infertility investigation',
+            essential: true,
             reference: 'sheep_urogenital_female_infertility',
           ),
           Item(
             name: 'Insertion of vaginal sponges',
+            essential: true,
             reference: 'sheep_urogenital_female_sponge',
           ),
           Item(
             name: 'Vaginal prolapse',
+            essential: true,
             reference: 'sheep_urogenital_female_prolapse_vaginal',
           ),
           Item(
             name: 'Cervical prolapse',
+            essential: true,
             reference: 'sheep_urogenital_female_prolapse_cervical',
           ),
           Item(
             name: 'Abortion investigation',
+            essential: true,
             reference: 'sheep_urogenital_female_abortion',
           ),
           Item(
             name: 'Dystocia',
+            essential: true,
             reference: 'sheep_urogenital_female_dystocia',
           ),
           Item(
             name: 'Caesarean',
+            essential: true,
             reference: 'sheep_urogenital_female_caesarean',
           ),
           Item(
@@ -212,6 +237,7 @@ class CategoryDataSheep {
         items: [
           Item(
             name: 'Examination of nervous system',
+            essential: true,
             reference: 'sheep_nervous_exam',
           ),
           Item(
@@ -226,14 +252,17 @@ class CategoryDataSheep {
         items: [
           Item(
             name: 'Evaluation of lameness',
+            essential: true,
             reference: 'sheep_locomotor_eval',
           ),
           Item(
             name: 'Examination of foot & limb',
+            essential: true,
             reference: 'sheep_locomotor_exam',
           ),
           Item(
             name: 'Foot trimming',
+            essential: true,
             reference: 'sheep_locomotor_trim',
           ),
           Item(
@@ -248,15 +277,17 @@ class CategoryDataSheep {
         items: [
           Item(
             name: 'Collection & examination (wool sample)',
-            reference: '',
+            essential: true,
+            reference: 'sheep_dermatology_sample_wool',
           ),
           Item(
             name: 'Collection & examination (skin scraping)',
-            reference: '',
+            essential: true,
+            reference: 'sheep_dermatology_sample_skin',
           ),
           Item(
             name: 'Orf (scarification for vaccination)',
-            reference: '',
+            reference: 'sheep_dermatology_orf',
           ),
         ],
       ),
@@ -266,22 +297,27 @@ class CategoryDataSheep {
         items: [
           Item(
             name: 'Condition scoring',
+            essential: true,
             reference: 'sheep_general_condition',
           ),
           Item(
             name: 'Vaccination',
+            essential: true,
             reference: 'sheep_general_vaccination',
           ),
           Item(
             name: 'Disbudding (goat)',
+            essential: true,
             reference: 'sheep_general_disbudding',
           ),
           Item(
             name: 'Blood sampling',
+            essential: true,
             reference: 'sheep_general_blood',
           ),
           Item(
             name: 'Parenteral administration of drugs',
+            essential: true,
             reference: 'sheep_general_drugs_parenteral',
           ),
           Item(

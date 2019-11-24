@@ -64,26 +64,32 @@ class CategoryDataCat {
         items: [
           Item(
             name: 'Urinary catheterisation (male)',
+            essential: true,
             reference: 'cat_urogenital_catheter_male',
           ),
           Item(
             name: 'Urinary catheterisation (female)',
+            essential: true,
             reference: 'cat_urogenital_catheter_female',
           ),
           Item(
             name: 'Cystocentesis',
+            essential: true,
             reference: 'cat_urogenital_cystocentesis',
           ),
           Item(
             name: 'Urine sample collection',
+            essential: true,
             reference: 'cat_urogenital_sample',
           ),
           Item(
             name: 'Castration',
+            essential: true,
             reference: 'cat_urogenital_castration',
           ),
           Item(
             name: 'Spaying',
+            essential: true,
             reference: 'cat_urogenital_spay',
           ),
           Item(
@@ -164,14 +170,17 @@ class CategoryDataCat {
         items: [
           Item(
             name: 'Use of penlight',
+            essential: true,
             reference: 'cat_eyes_penlight',
           ),
           Item(
             name: 'Use of direct ophthalmoscope',
+            essential: true,
             reference: 'cat_eyes_scope',
           ),
           Item(
             name: 'Use of fluorescein',
+            essential: true,
             reference: 'cat_eyes_fluorescein',
           ),
           Item(
@@ -208,10 +217,12 @@ class CategoryDataCat {
         items: [
           Item(
             name: 'Evaluation of lameness',
+            essential: true,
             reference: 'cat_locomotor_lameness',
           ),
           Item(
             name: 'Nail clipping',
+            essential: true,
             reference: 'cat_locomotor_nails',
           ),
           Item(
@@ -242,6 +253,7 @@ class CategoryDataCat {
         items: [
           Item(
             name: 'Complete neurological examination',
+            essential: true,
             reference: 'cat_nervous_neuro',
           ),
           Item(
@@ -260,6 +272,7 @@ class CategoryDataCat {
         items: [
           Item(
             name: 'Examination of the mouth',
+            essential: true,
             reference: 'cat_oral_exam',
           ),
           Item(
@@ -298,10 +311,12 @@ class CategoryDataCat {
         items: [
           Item(
             name: 'Sedation & tranquillisation',
+            essential: true,
             reference: 'cat_restraint_chemical',
           ),
           Item(
             name: 'Manual restraint',
+            essential: true,
             reference: 'cat_restraint_manual',
           ),
         ],
@@ -312,18 +327,22 @@ class CategoryDataCat {
         items: [
           Item(
             name: 'Intravenous',
+            essential: true,
             reference: 'cat_ga_iv',
           ),
           Item(
             name: 'Inhalational',
+            essential: true,
             reference: 'cat_ga_inhale',
           ),
           Item(
             name: 'Endotracheal intubation',
+            essential: true,
             reference: 'cat_ga_intubation',
           ),
           Item(
             name: 'Local anaesthesia',
+            essential: true,
             reference: 'cat_ga_local',
           ),
           Item(
@@ -338,14 +357,17 @@ class CategoryDataCat {
         items: [
           Item(
             name: 'Skin scraping',
+            essential: true,
             reference: 'cat_ears_scrape',
           ),
           Item(
             name: 'Use of Woods lamp',
+            essential: true,
             reference: 'cat_ears_woods',
           ),
           Item(
             name: 'Use of otoscope',
+            essential: true,
             reference: 'cat_ears_otoscope',
           ),
           Item(
@@ -392,42 +414,52 @@ class CategoryDataCat {
         items: [
           Item(
             name: 'Intravenous catheterisation',
+            essential: true,
             reference: 'cat_general_iv_catheter',
           ),
           Item(
             name: 'Vaccination',
+            essential: true,
             reference: 'cat_general_vaccination',
           ),
           Item(
             name: 'Parenteral administration of drugs',
+            essential: true,
             reference: 'cat_general_parenteral',
           ),
           Item(
             name: 'Microchipping',
+            essential: true,
             reference: 'cat_general_microchip',
           ),
           Item(
             name: 'Euthanasia',
+            essential: true,
             reference: 'cat_general_euthanasia',
           ),
           Item(
             name: 'Skin suturing',
+            essential: true,
             reference: 'cat_general_suture',
           ),
           Item(
             name: 'Wound management (surgical)',
+            essential: true,
             reference: 'cat_general_wound_surgical',
           ),
           Item(
             name: 'Management of traumatic wound',
+            essential: true,
             reference: 'cat_general_wound_traumatic',
           ),
           Item(
             name: 'Bandaging',
+            essential: true,
             reference: 'cat_general_bandage',
           ),
           Item(
             name: 'Road traffic accident management',
+            essential: true,
             reference: 'cat_general_road',
           ),
           Item(
@@ -446,10 +478,12 @@ class CategoryDataCat {
         items: [
           Item(
             name: 'IV fluid administration',
+            essential: true,
             reference: 'cat_ic_ivfluid',
           ),
           Item(
             name: 'Enteral (nasopharyngeal intubation)',
+            essential: true,
             reference: 'cat_ic_enteral_naso',
           ),
           Item(
