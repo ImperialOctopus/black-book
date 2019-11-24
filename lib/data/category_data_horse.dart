@@ -8,6 +8,7 @@ import '../model/subcategory.dart';
 class CategoryDataHorse {
   static const Category data = Category(
     name: 'Horse',
+    icon: Icon(MdiIcons.donkey),
     subcategories: [
       Subcategory(
         name: 'Alimentary System',
@@ -49,7 +50,7 @@ class CategoryDataHorse {
       ),
       Subcategory(
         name: 'Upper Respiratory Tract',
-        icon: Icon(MdiIcons.lungs),
+        icon: Icon(MdiIcons.balloon),
         items: [
           Item(
             name: 'External examination/palpation',
@@ -145,7 +146,7 @@ class CategoryDataHorse {
       ),
       Subcategory(
         name: 'Locomotor System',
-        icon: Icon(MdiIcons.armFlexOutline),
+        icon: Icon(MdiIcons.armFlex),
         items: [
           Item(
             name: 'Evaluation of lameness',
@@ -243,7 +244,7 @@ class CategoryDataHorse {
       ),
       Subcategory(
         name: 'Dermatology',
-        icon: Icon(MdiIcons.paperRoll),
+        icon: Icon(MdiIcons.script),
         items: [
           Item(
             name: 'Collection of hair pluck',
@@ -261,7 +262,7 @@ class CategoryDataHorse {
       ),
       Subcategory(
         name: 'Eyes and Adnexa',
-        icon: Icon(MdiIcons.eyeCheck),
+        icon: Icon(MdiIcons.eye),
         items: [
           Item(
             name: 'Use of pen torch',

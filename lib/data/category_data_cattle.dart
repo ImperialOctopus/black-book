@@ -8,6 +8,7 @@ import '../model/subcategory.dart';
 class CategoryDataCattle {
   static const Category data = Category(
     name: 'Cattle',
+    icon: Icon(MdiIcons.cow),
     subcategories: [
       Subcategory(
         name: 'Alimentary System',
@@ -169,7 +170,7 @@ class CategoryDataCattle {
       ),
       Subcategory(
         name: 'Locomotor System',
-        icon: Icon(MdiIcons.armFlexOutline),
+        icon: Icon(MdiIcons.armFlex),
         items: [
           Item(
             name: 'Evaluation of lameness',
@@ -217,7 +218,7 @@ class CategoryDataCattle {
       ),
       Subcategory(
         name: 'Dermatology',
-        icon: Icon(MdiIcons.paperRoll),
+        icon: Icon(MdiIcons.script),
         items: [
           Item(
             name: 'Collection of hair pluck',
@@ -257,7 +258,7 @@ class CategoryDataCattle {
       ),
       Subcategory(
         name: 'Eyes and Adnexa',
-        icon: Icon(MdiIcons.eyeCheck),
+        icon: Icon(MdiIcons.eye),
         items: [
           Item(
             name: 'Use of pen torch',
@@ -349,7 +350,7 @@ class CategoryDataCattle {
       ),
       Subcategory(
         name: 'Obtaining Samples for Laboratory Testing',
-        icon: Icon(MdiIcons.microscope),
+        icon: Icon(MdiIcons.testTube),
         items: [
           Item(
             name: 'Urine',

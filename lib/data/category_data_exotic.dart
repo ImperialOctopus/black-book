@@ -8,6 +8,7 @@ import '../model/subcategory.dart';
 class CategoryDataExotic {
   static const Category data = Category(
     name: 'Small Pets & Exotics',
+    icon: Icon(MdiIcons.rabbit),
     subcategories: [
       Subcategory(
         name: 'Rabbits',
@@ -83,7 +84,7 @@ class CategoryDataExotic {
       ),
       Subcategory(
         name: 'Rodents',
-        icon: Icon(MdiIcons.cursorDefaultOutline),
+        icon: Icon(MdiIcons.pipe),
         items: [
           Item(
             name: 'General examination (rats)',
@@ -109,7 +110,7 @@ class CategoryDataExotic {
       ),
       Subcategory(
         name: 'Birds',
-        icon: Icon(MdiIcons.feather),
+        icon: Icon(MdiIcons.duck),
         items: [
           Item(
             name: 'General examination',

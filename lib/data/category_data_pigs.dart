@@ -8,6 +8,7 @@ import '../model/subcategory.dart';
 class CategoryDataPigs {
   static const Category data = Category(
     name: 'Pigs',
+    icon: Icon(MdiIcons.pig),
     subcategories: [
       Subcategory(
         name: 'General Clinical',
@@ -91,7 +92,7 @@ class CategoryDataPigs {
       ),
       Subcategory(
         name: 'Fertility',
-        icon: Icon(MdiIcons.egg),
+        icon: Icon(MdiIcons.reproduction),
         items: [
           Item(
             name: 'Pregnancy diagnosis (ultrasound)',
@@ -121,7 +122,7 @@ class CategoryDataPigs {
       ),
       Subcategory(
         name: 'Herd Health Visit',
-        icon: Icon(MdiIcons.accountGroup),
+        icon: Icon(MdiIcons.medicalBag),
         items: [
           Item(
             name: 'Observe herd inspection',

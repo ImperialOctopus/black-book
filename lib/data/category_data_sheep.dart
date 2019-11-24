@@ -8,6 +8,7 @@ import '../model/subcategory.dart';
 class CategoryDataSheep {
   static const Category data = Category(
     name: 'Sheep & Goats',
+    icon: Icon(MdiIcons.sheep),
     subcategories: [
       Subcategory(
         name: 'General Clinical',
@@ -221,7 +222,7 @@ class CategoryDataSheep {
       ),
       Subcategory(
         name: 'Locomotor System',
-        icon: Icon(MdiIcons.armFlexOutline),
+        icon: Icon(MdiIcons.armFlex),
         items: [
           Item(
             name: 'Evaluation of lameness',
@@ -243,7 +244,7 @@ class CategoryDataSheep {
       ),
       Subcategory(
         name: 'Dermatology',
-        icon: Icon(MdiIcons.paperRoll),
+        icon: Icon(MdiIcons.script),
         items: [
           Item(
             name: 'Collection & examination (wool sample)',

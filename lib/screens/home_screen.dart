@@ -23,6 +23,7 @@ class HomeScreen extends StatelessWidget {
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
               title: Text(categories[index].name),
+              leading: categories[index].icon,
               onTap: () {
                 Navigator.of(context).push(
                   SlideLeftRoute(

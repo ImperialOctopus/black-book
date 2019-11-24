@@ -8,6 +8,7 @@ import '../model/subcategory.dart';
 class CategoryDataLab {
   static const Category data = Category(
     name: 'Laboratory Techniques',
+    icon: Icon(MdiIcons.testTube),
     subcategories: [
       Subcategory(
         name: '',

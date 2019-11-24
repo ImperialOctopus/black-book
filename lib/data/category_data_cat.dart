@@ -8,6 +8,7 @@ import '../model/subcategory.dart';
 class CategoryDataCat {
   static const Category data = Category(
     name: 'Cat',
+    icon: Icon(MdiIcons.cat),
     subcategories: [
       Subcategory(
         name: 'Alimentary System',
@@ -41,7 +42,7 @@ class CategoryDataCat {
       ),
       Subcategory(
         name: 'General Abdomen',
-        icon: Icon(MdiIcons.middleware),
+        icon: Icon(MdiIcons.sausage),
         items: [
           Item(
             name: 'Radiography',
@@ -159,7 +160,7 @@ class CategoryDataCat {
       ),
       Subcategory(
         name: 'Eyes and Adnexa',
-        icon: Icon(MdiIcons.eyeCheck),
+        icon: Icon(MdiIcons.eye),
         items: [
           Item(
             name: 'Use of penlight',
@@ -185,7 +186,7 @@ class CategoryDataCat {
       ),
       Subcategory(
         name: 'Nasal Chambers',
-        icon: Icon(MdiIcons.steam),
+        icon: Icon(MdiIcons.cloud),
         items: [
           Item(
             name: 'Endoscopy',
