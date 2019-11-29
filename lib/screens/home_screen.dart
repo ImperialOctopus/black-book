@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../model/model.dart';
 import '../routes/enter_exit_route.dart';
+import 'appendix/appendix_screen.dart';
 import 'checklist/checklist_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -12,20 +13,34 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Black Book'),
-      ),
-      body: ListTile(
-        title: Text('Clinical Checklist'),
-        onTap: () {
-          Navigator.of(context).push(
-            EnterExitRoute(
-              enterPage: ChecklistScreen(model: model),
-              exitPage: this,
+        appBar: AppBar(
+          title: const Text('Black Book'),
+        ),
+        body: ListView(
+          children: <Widget>[
+            ListTile(
+              title: Text('Clinical Checklist'),
+              onTap: () {
+                Navigator.of(context).push(
+                  EnterExitRoute(
+                    enterPage: ChecklistScreen(model: model),
+                    exitPage: this,
+                  ),
+                );
+              },
             ),
-          );
-        },
-      ),
-    );
+            ListTile(
+              title: Text('Appendix'),
+              onTap: () {
+                Navigator.of(context).push(
+                  EnterExitRoute(
+                    enterPage: AppendixScreen(),
+                    exitPage: this,
+                  ),
+                );
+              },
+            ),
+          ],
+        ));
   }
 }
