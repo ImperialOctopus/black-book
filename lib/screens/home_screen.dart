@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../data/category_data.dart';
-import '../model/category.dart';
 import '../model/model.dart';
-import '../routes/slide_left_route.dart';
-import '../widgets/category_widget.dart';
+import '../routes/enter_exit_route.dart';
+import 'checklist/checklist_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   final Model model;
-  final List<Category> categories = CategoryData.categoryList;
 
   HomeScreen({Key key, this.model}) : super(key: key);
 
@@ -16,24 +13,19 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Black Book Category List'),
+        title: const Text('Black Book'),
       ),
-      body: ListView.builder(
-          itemCount: categories.length,
-          itemBuilder: (BuildContext context, int index) {
-            return ListTile(
-              title: Text(categories[index].name),
-              leading: categories[index].icon,
-              onTap: () {
-                Navigator.of(context).push(
-                  SlideLeftRoute(
-                    page: CategoryWidget(
-                        model: model, category: categories[index]),
-                  ),
-                );
-              },
-            );
-          }),
+      body: ListTile(
+        title: Text('Clinical Checklist'),
+        onTap: () {
+          Navigator.of(context).push(
+            EnterExitRoute(
+              enterPage: ChecklistScreen(model: model),
+              exitPage: this,
+            ),
+          );
+        },
+      ),
     );
   }
 }
