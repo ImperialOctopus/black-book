@@ -1,26 +1,27 @@
 import 'package:flutter/material.dart';
 
-import '../model/category.dart';
-import '../model/item.dart';
-import '../model/model.dart';
-import '../model/subcategory.dart';
-import 'progress_icon_widget.dart';
+import '../../model/category.dart';
+import '../../model/item.dart';
+import '../../model/model.dart';
+import '../../model/subcategory.dart';
+import '../../data/progress_icons.dart';
 
-class CategoryWidget extends StatefulWidget {
+class ChecklistCategoryScreen extends StatefulWidget {
   final Model model;
   final Category category;
-  const CategoryWidget({Key key, this.model, this.category}) : super(key: key);
+  const ChecklistCategoryScreen({Key key, this.model, this.category})
+      : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
-    return _CategoryWidgetState(model: model, category: category);
+    return _ChecklistCategoryScreenState(model: model, category: category);
   }
 }
 
-class _CategoryWidgetState extends State<CategoryWidget> {
+class _ChecklistCategoryScreenState extends State<ChecklistCategoryScreen> {
   final Model model;
   final Category category;
-  _CategoryWidgetState({this.model, this.category});
+  _ChecklistCategoryScreenState({this.model, this.category});
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +67,7 @@ class _CategoryWidgetState extends State<CategoryWidget> {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           IconButton(
-            icon: ProgressIconWidget.intMap[_progress[0]],
+            icon: ProgressIcons.intMap[_progress[0]],
             onPressed: () => setState(
               () {
                 _progress[0] += 1;
@@ -78,7 +79,7 @@ class _CategoryWidgetState extends State<CategoryWidget> {
             ),
           ),
           IconButton(
-            icon: ProgressIconWidget.intMap[_progress[1]],
+            icon: ProgressIcons.intMap[_progress[1]],
             onPressed: () => setState(
               () {
                 _progress[1] += 1;
@@ -90,7 +91,7 @@ class _CategoryWidgetState extends State<CategoryWidget> {
             ),
           ),
           IconButton(
-            icon: ProgressIconWidget.intMap[_progress[2]],
+            icon: ProgressIcons.intMap[_progress[2]],
             onPressed: () => setState(
               () {
                 _progress[2] += 1;
