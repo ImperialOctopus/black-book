@@ -53,8 +53,8 @@ android {
         applicationId "com.imperialoctopus.black_book"
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode flutterVersionCode.toInteger()
-        versionName flutterVersionName
+        versionCode 2
+        versionName "1.1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         proguardFiles getDefaultProguardFile('proguard-android.txt')
         manifestPlaceholders = [:]
