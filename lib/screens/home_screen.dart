@@ -16,34 +16,43 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Black Book'),
       ),
-      body: ListView(
-        children: ListTile.divideTiles(
-          context: context,
-          tiles: [
-            ListTile(
-              title: Text('Clinical Checklist'),
-              onTap: () {
-                Navigator.of(context).push(
-                  EnterExitRoute(
-                    enterPage: ChecklistScreen(model: model),
-                    exitPage: this,
-                  ),
-                );
-              },
-            ),
-            ListTile(
-              title: Text('Appendix'),
-              onTap: () {
-                Navigator.of(context).push(
-                  EnterExitRoute(
-                    enterPage: AppendixScreen(),
-                    exitPage: this,
-                  ),
-                );
-              },
-            ),
-          ],
-        ).toList(),
+      body: Column(
+        children: <Widget>[
+          Ink.image(
+            image: AssetImage('assets/icon/icon.png'),
+            width: 100,
+            height: 100,
+          ),
+          ListView(
+            children: ListTile.divideTiles(
+              context: context,
+              tiles: [
+                ListTile(
+                  title: Text('Clinical Checklist'),
+                  onTap: () {
+                    Navigator.of(context).push(
+                      EnterExitRoute(
+                        enterPage: ChecklistScreen(model: model),
+                        exitPage: this,
+                      ),
+                    );
+                  },
+                ),
+                ListTile(
+                  title: Text('Appendix'),
+                  onTap: () {
+                    Navigator.of(context).push(
+                      EnterExitRoute(
+                        enterPage: AppendixScreen(),
+                        exitPage: this,
+                      ),
+                    );
+                  },
+                ),
+              ],
+            ).toList(),
+          ),
+        ],
       ),
     );
   }
