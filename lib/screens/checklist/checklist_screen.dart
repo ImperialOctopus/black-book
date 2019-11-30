@@ -24,6 +24,7 @@ class ChecklistScreen extends StatelessWidget {
             return ListTile(
               title: Text(categories[index].name),
               leading: categories[index].icon,
+              trailing: Icon(Icons.keyboard_arrow_right),
               onTap: () {
                 Navigator.of(context).push(
                   EnterExitRoute(

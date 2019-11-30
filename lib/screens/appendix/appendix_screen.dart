@@ -22,6 +22,7 @@ class AppendixScreen extends StatelessWidget {
           tiles: <Widget>[
             ListTile(
               title: const Text('Health & Safety'),
+              trailing: Icon(Icons.keyboard_arrow_right),
               onTap: () {
                 Navigator.of(context).push(
                   EnterExitRoute(
@@ -33,6 +34,7 @@ class AppendixScreen extends StatelessWidget {
             ),
             ListTile(
               title: const Text('RCVS EMS Guidance'),
+              trailing: Icon(Icons.keyboard_arrow_right),
               onTap: () {
                 Navigator.of(context).push(
                   EnterExitRoute(
@@ -44,6 +46,7 @@ class AppendixScreen extends StatelessWidget {
             ),
             ListTile(
               title: const Text('Biological Data'),
+              trailing: Icon(Icons.keyboard_arrow_right),
               onTap: () {
                 Navigator.of(context).push(
                   EnterExitRoute(
@@ -55,6 +58,7 @@ class AppendixScreen extends StatelessWidget {
             ),
             ListTile(
               title: const Text('Body Weight Ratios'),
+              trailing: Icon(Icons.keyboard_arrow_right),
               onTap: () {
                 Navigator.of(context).push(
                   EnterExitRoute(
@@ -66,6 +70,7 @@ class AppendixScreen extends StatelessWidget {
             ),
             ListTile(
               title: const Text('Laboratory Samples & Profiles'),
+              trailing: Icon(Icons.keyboard_arrow_right),
               onTap: () {
                 Navigator.of(context).push(
                   EnterExitRoute(
@@ -77,6 +82,7 @@ class AppendixScreen extends StatelessWidget {
             ),
             ListTile(
               title: const Text('Normal Laboratory Values'),
+              trailing: Icon(Icons.keyboard_arrow_right),
               onTap: () {
                 Navigator.of(context).push(
                   EnterExitRoute(
@@ -88,6 +94,7 @@ class AppendixScreen extends StatelessWidget {
             ),
             ListTile(
               title: const Text('Useful Addresses'),
+              trailing: Icon(Icons.keyboard_arrow_right),
               onTap: () {
                 Navigator.of(context).push(
                   EnterExitRoute(
