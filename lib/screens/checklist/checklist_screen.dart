@@ -18,24 +18,28 @@ class ChecklistScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Clinical Checklist'),
       ),
-      body: ListView.builder(
-          itemCount: categories.length,
-          itemBuilder: (BuildContext context, int index) {
-            return ListTile(
-              title: Text(categories[index].name),
-              leading: categories[index].icon,
-              trailing: Icon(Icons.keyboard_arrow_right),
-              onTap: () {
-                Navigator.of(context).push(
-                  EnterExitRoute(
-                    enterPage: ChecklistCategoryScreen(
-                        model: model, category: categories[index]),
-                    exitPage: this,
-                  ),
-                );
-              },
-            );
-          }),
+      body: ListView.separated(
+        itemCount: categories.length,
+        itemBuilder: (BuildContext context, int index) {
+          return ListTile(
+            title: Text(categories[index].name),
+            leading: categories[index].icon,
+            trailing: Icon(Icons.keyboard_arrow_right),
+            onTap: () {
+              Navigator.of(context).push(
+                EnterExitRoute(
+                  enterPage: ChecklistCategoryScreen(
+                      model: model, category: categories[index]),
+                  exitPage: this,
+                ),
+              );
+            },
+          );
+        },
+        separatorBuilder: (BuildContext context, int index) {
+          return Divider();
+        },
+      ),
     );
   }
 }
