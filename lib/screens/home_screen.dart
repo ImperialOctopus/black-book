@@ -13,11 +13,13 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('Black Book'),
-        ),
-        body: ListView(
-          children: <Widget>[
+      appBar: AppBar(
+        title: const Text('Black Book'),
+      ),
+      body: ListView(
+        children: ListTile.divideTiles(
+          context: context,
+          tiles: [
             ListTile(
               title: Text('Clinical Checklist'),
               onTap: () {
@@ -41,6 +43,8 @@ class HomeScreen extends StatelessWidget {
               },
             ),
           ],
-        ));
+        ).toList(),
+      ),
+    );
   }
 }

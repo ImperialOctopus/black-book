@@ -40,18 +40,21 @@ class _ChecklistCategoryScreenState extends State<ChecklistCategoryScreen> {
     return Card(
       child: Column(
         mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          ...?(subcategory.showName
-              ? [
-                  ListTile(
-                    leading: subcategory.icon,
-                    title: Text(subcategory.name),
-                  )
-                ]
-              : null),
-          ...List<Widget>.generate(subcategory.items.length,
-              (int i) => buildListItem(subcategory.items[i]))
-        ],
+        children: ListTile.divideTiles(
+          context: context,
+          tiles: <Widget>[
+            ...?(subcategory.showName
+                ? [
+                    ListTile(
+                      leading: subcategory.icon,
+                      title: Text(subcategory.name),
+                    )
+                  ]
+                : null),
+            ...List<Widget>.generate(subcategory.items.length,
+                (int i) => buildListItem(subcategory.items[i]))
+          ],
+        ).toList(),
       ),
     );
   }
