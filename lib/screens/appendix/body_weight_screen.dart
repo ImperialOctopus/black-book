@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class HealthSafetyScreen extends StatelessWidget {
-  const HealthSafetyScreen();
+class BodyWeightScreen extends StatelessWidget {
+  const BodyWeightScreen();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Health & Safety'),
+        title: Text('Body Weight Ratios'),
       ),
       body: Center(
         child: Text('Greetings, Guardian.'),
