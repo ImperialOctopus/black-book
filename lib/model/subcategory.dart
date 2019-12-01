@@ -11,8 +11,4 @@ class Subcategory {
     this.icon,
     @required this.items,
   });
-
-  bool get showName  {
-    return name != '' || icon != null;
-  }
 }
