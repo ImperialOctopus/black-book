@@ -1,3 +1,5 @@
+import 'package:black_book/routes/slide_left_route.dart';
+import 'package:black_book/screens/appendix/appendix_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../model/model.dart';
@@ -18,13 +20,24 @@ class HomeScreen extends StatelessWidget {
         children: <Widget>[
           menuItem(
             context: context,
-            name: 'Text',
+            name: 'Clinical Checklist',
             imageAsset: 'assets/images/checklist.jpg',
             onTap: () {
               Navigator.of(context).push(
-                EnterExitRoute(
-                  enterPage: ChecklistScreen(model: model),
-                  exitPage: this,
+                SlideLeftRoute(
+                  page: ChecklistScreen(model: model),
+                ),
+              );
+            },
+          ),
+          menuItem(
+            context: context,
+            name: 'Appendix',
+            imageAsset: 'assets/images/appendix.jpg',
+            onTap: () {
+              Navigator.of(context).push(
+                SlideLeftRoute(
+                  page: AppendixScreen(),
                 ),
               );
             },
