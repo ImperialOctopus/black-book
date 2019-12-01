@@ -30,32 +30,26 @@ class _ChecklistCategoryScreenState extends State<ChecklistCategoryScreen> {
         title: Text(category.name),
       ),
       body: ListView(
-        children: List<Widget>.generate(category.subcategories.length,
-            (int i) => buildSubcategory(category.subcategories[i])),
+        children: ListTile.divideTiles(
+          context: context,
+          tiles: List<Widget>.generate(category.subcategories.length,
+              (int i) => buildSubcategory(category.subcategories[i])),
+        ).toList(),
       ),
     );
   }
 
   Widget buildSubcategory(Subcategory subcategory) {
-    return Card(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: ListTile.divideTiles(
-          context: context,
-          tiles: <Widget>[
-            ...?(subcategory.showName
-                ? [
-                    ListTile(
-                      leading: subcategory.icon,
-                      title: Text(subcategory.name),
-                    )
-                  ]
-                : null),
-            ...List<Widget>.generate(subcategory.items.length,
-                (int i) => buildListItem(subcategory.items[i]))
-          ],
-        ).toList(),
-      ),
+    return ExpansionTile(
+      leading: subcategory.icon,
+      title: Text(subcategory.name),
+      children: ListTile.divideTiles(
+        context: context,
+        tiles: List<Widget>.generate(subcategory.items.length,
+            (int i) => buildListItem(subcategory.items[i])),
+      ).toList(),
+      initiallyExpanded: true,
+      
     );
   }
 
