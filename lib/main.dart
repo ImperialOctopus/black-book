@@ -43,6 +43,11 @@ class _MainAppState extends State<MainApp> {
           title: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
           body1: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
         ),
+
+        dividerTheme: DividerThemeData(
+          thickness: 1,
+          space: 1,
+        ),
       ),
       home: FutureBuilder<Model>(
           future: _modelFuture,
