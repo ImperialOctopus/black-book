@@ -48,8 +48,7 @@ class _ChecklistCategoryScreenState extends State<ChecklistCategoryScreen> {
         tiles: List<Widget>.generate(subcategory.items.length,
             (int i) => buildListItem(subcategory.items[i])),
       ).toList(),
-      initiallyExpanded: true,
-      
+      initiallyExpanded: false,
     );
   }
 
