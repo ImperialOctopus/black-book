@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../model/model.dart';
 import '../routes/enter_exit_route.dart';
-import 'appendix/appendix_screen.dart';
 import 'checklist/checklist_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -17,86 +16,59 @@ class HomeScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          SizedBox(
-            height: 250,
-            child: Card(
-              semanticContainer: true,
-              clipBehavior: Clip.antiAlias,
-              child: Material(
-                color: Colors.white,
-                child: InkWell(
-                  child: Image.asset(
-                    'assets/images/checklist.jpg',
-                    fit: BoxFit.cover,
-                  ),
-                  onTap: () {
-                    Navigator.of(context).push(
-                      EnterExitRoute(
-                        enterPage: ChecklistScreen(model: model),
-                        exitPage: this,
-                      ),
-                    );
-                  },
-                ),
-              ),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0),
-              ),
-              elevation: 5,
-              margin: EdgeInsets.all(10),
-            ),
-          ),
-          SizedBox(
-            height: 250,
-            child: Card(
-              semanticContainer: true,
-              clipBehavior: Clip.antiAlias,
-              child: Material(
-                child: InkWell(
-                  child: Image.asset(
-                    'assets/images/checklist.jpg',
-                    fit: BoxFit.cover,
-                  ),
-                  onTap: () {
-                    Navigator.of(context).push(
-                      EnterExitRoute(
-                        enterPage: AppendixScreen(),
-                        exitPage: this,
-                      ),
-                    );
-                  },
-                ),
-              ),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0),
-              ),
-              elevation: 5,
-              margin: EdgeInsets.all(10),
-            ),
-          ),
-          RaisedButton(
-            elevation: 5,
-            padding: EdgeInsets.all(10),
-            onPressed: () {
+          menuItem(
+            context: context,
+            name: 'Text',
+            imageAsset: 'assets/images/checklist.jpg',
+            onTap: () {
               Navigator.of(context).push(
                 EnterExitRoute(
-                  enterPage: AppendixScreen(),
+                  enterPage: ChecklistScreen(model: model),
                   exitPage: this,
                 ),
               );
             },
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.0),
-            ),
-            child: Container(
-              height: 250,
-              child: Image.asset(
-                'assets/images/checklist.jpg',
-                fit: BoxFit.cover,
-              ),
-            ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget menuItem(
+      {BuildContext context, String name, String imageAsset, Function onTap}) {
+    return SizedBox(
+      height: 200,
+      child: Card(
+        color: Theme.of(context).primaryColor,
+        semanticContainer: true,
+        clipBehavior: Clip.antiAlias,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10.0),
+        ),
+        elevation: 5,
+        margin: EdgeInsets.all(10),
+        child: InkWell(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Expanded(
+                child: Image.asset(
+                  imageAsset,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Align(
+                alignment: Alignment.bottomRight,
+                child: Padding(
+                  padding: EdgeInsets.only(right: 5),
+                  child: Text(name,
+                      style: Theme.of(context).primaryTextTheme.title),
+                ),
+              ),
+            ],
+          ),
+          onTap: onTap,
+        ),
       ),
     );
   }
