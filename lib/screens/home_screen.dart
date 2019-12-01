@@ -13,22 +13,22 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Black Book'),
-      ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Ink.image(
-            image: AssetImage('assets/icon/icon.png'),
-            width: 100,
-            height: 100,
-          ),
-          ListView(
-            children: ListTile.divideTiles(
-              context: context,
-              tiles: [
-                ListTile(
-                  title: Text('Clinical Checklist'),
+          SizedBox(
+            height: 250,
+            child: Card(
+              semanticContainer: true,
+              clipBehavior: Clip.antiAlias,
+              child: Material(
+                color: Colors.white,
+                child: InkWell(
+                  child: Image.asset(
+                    'assets/images/checklist.jpg',
+                    fit: BoxFit.cover,
+                  ),
                   onTap: () {
                     Navigator.of(context).push(
                       EnterExitRoute(
@@ -38,8 +38,25 @@ class HomeScreen extends StatelessWidget {
                     );
                   },
                 ),
-                ListTile(
-                  title: Text('Appendix'),
+              ),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              elevation: 5,
+              margin: EdgeInsets.all(10),
+            ),
+          ),
+          SizedBox(
+            height: 250,
+            child: Card(
+              semanticContainer: true,
+              clipBehavior: Clip.antiAlias,
+              child: Material(
+                child: InkWell(
+                  child: Image.asset(
+                    'assets/images/checklist.jpg',
+                    fit: BoxFit.cover,
+                  ),
                   onTap: () {
                     Navigator.of(context).push(
                       EnterExitRoute(
@@ -49,8 +66,35 @@ class HomeScreen extends StatelessWidget {
                     );
                   },
                 ),
-              ],
-            ).toList(),
+              ),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              elevation: 5,
+              margin: EdgeInsets.all(10),
+            ),
+          ),
+          RaisedButton(
+            elevation: 5,
+            padding: EdgeInsets.all(10),
+            onPressed: () {
+              Navigator.of(context).push(
+                EnterExitRoute(
+                  enterPage: AppendixScreen(),
+                  exitPage: this,
+                ),
+              );
+            },
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0),
+            ),
+            child: Container(
+              height: 250,
+              child: Image.asset(
+                'assets/images/checklist.jpg',
+                fit: BoxFit.cover,
+              ),
+            ),
           ),
         ],
       ),
