@@ -11,6 +11,7 @@ dependencies:
   cupertino_icons: ^0.1.0
   hive: ^1.1.1
   hive_flutter: ^0.2.1
+  data_tables: ^1.0.1
   path_provider: ^1.3.0
   material_design_icons_flutter: ^3.4.4595
 
