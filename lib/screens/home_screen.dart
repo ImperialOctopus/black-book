@@ -13,74 +13,121 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<Widget> _menuItems = <Widget>[
+      menuItem(
+        context: context,
+        name: 'Clinical Checklist',
+        imageAsset: 'assets/images/checklist.jpg',
+        onTap: () {
+          Navigator.of(context).push(
+            SlideLeftRoute(
+              page: ChecklistScreen(model: model),
+            ),
+          );
+        },
+      ),
+      menuItem(
+        context: context,
+        name: 'Appendix',
+        imageAsset: 'assets/images/appendix.jpg',
+        onTap: () {
+          Navigator.of(context).push(
+            SlideLeftRoute(
+              page: AppendixScreen(),
+            ),
+          );
+        },
+      ),
+      menuItem(
+        context: context,
+        name: 'Appendix',
+        imageAsset: 'assets/images/appendix.jpg',
+        onTap: () {
+          Navigator.of(context).push(
+            SlideLeftRoute(
+              page: AppendixScreen(),
+            ),
+          );
+        },
+      ),
+      menuItem(
+        context: context,
+        name: 'Appendix',
+        imageAsset: 'assets/images/appendix.jpg',
+        onTap: () {
+          Navigator.of(context).push(
+            SlideLeftRoute(
+              page: AppendixScreen(),
+            ),
+          );
+        },
+      ),
+    ];
+
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          menuItem(
-            context: context,
-            name: 'Clinical Checklist',
-            imageAsset: 'assets/images/checklist.jpg',
-            onTap: () {
-              Navigator.of(context).push(
-                SlideLeftRoute(
-                  page: ChecklistScreen(model: model),
-                ),
-              );
-            },
+      body: SafeArea(
+        child: SizedBox.expand(
+          child: Padding(
+            padding: EdgeInsets.all(10),
+            child: OrientationBuilder(builder: (context, orientation) {
+              return orientation == Orientation.portrait
+                  ? Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: _menuItems,
+                    )
+                  : Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: _menuItems,
+                    );
+            }),
           ),
-          menuItem(
-            context: context,
-            name: 'Appendix',
-            imageAsset: 'assets/images/appendix.jpg',
-            onTap: () {
-              Navigator.of(context).push(
-                SlideLeftRoute(
-                  page: AppendixScreen(),
-                ),
-              );
-            },
-          ),
-        ],
+        ),
       ),
     );
   }
 
   Widget menuItem(
       {BuildContext context, String name, String imageAsset, Function onTap}) {
-    return SizedBox(
-      height: 200,
-      child: Card(
-        color: Theme.of(context).primaryColor,
-        semanticContainer: true,
-        clipBehavior: Clip.antiAlias,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10.0),
+    return Expanded(
+      child: ConstrainedBox(
+        constraints: BoxConstraints(
+          maxHeight: 200,
         ),
-        elevation: 5,
-        margin: EdgeInsets.all(10),
-        child: InkWell(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              Expanded(
-                child: Image.asset(
-                  imageAsset,
-                  fit: BoxFit.cover,
-                ),
-              ),
-              Align(
-                alignment: Alignment.bottomRight,
-                child: Padding(
-                  padding: EdgeInsets.only(right: 5),
-                  child: Text(name,
-                      style: Theme.of(context).primaryTextTheme.title),
-                ),
-              ),
-            ],
+        child: Card(
+          color: Theme.of(context).primaryColor,
+          semanticContainer: true,
+          clipBehavior: Clip.antiAlias,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0),
           ),
-          onTap: onTap,
+          elevation: 5,
+          child: InkWell(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                Expanded(
+                  child: Image.asset(
+                    imageAsset,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                Align(
+                  alignment: Alignment.bottomRight,
+                  child: Padding(
+                    padding: EdgeInsets.only(right: 4),
+                    child: Text(
+                      name,
+                      textAlign: TextAlign.end,
+                      style: Theme.of(context).primaryTextTheme.title,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            onTap: onTap,
+          ),
         ),
       ),
     );
