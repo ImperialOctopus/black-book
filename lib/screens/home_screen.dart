@@ -3,7 +3,6 @@ import 'package:black_book/screens/appendix/appendix_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../model/model.dart';
-import '../routes/enter_exit_route.dart';
 import 'checklist/checklist_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -38,52 +37,17 @@ class HomeScreen extends StatelessWidget {
           );
         },
       ),
-      menuItem(
-        context: context,
-        name: 'Appendix',
-        imageAsset: 'assets/images/appendix.jpg',
-        onTap: () {
-          Navigator.of(context).push(
-            SlideLeftRoute(
-              page: AppendixScreen(),
-            ),
-          );
-        },
-      ),
-      menuItem(
-        context: context,
-        name: 'Appendix',
-        imageAsset: 'assets/images/appendix.jpg',
-        onTap: () {
-          Navigator.of(context).push(
-            SlideLeftRoute(
-              page: AppendixScreen(),
-            ),
-          );
-        },
-      ),
     ];
 
     return Scaffold(
-      body: SafeArea(
-        child: SizedBox.expand(
-          child: Padding(
+      body: SizedBox.expand(
+        child: Padding(
             padding: EdgeInsets.all(10),
-            child: OrientationBuilder(builder: (context, orientation) {
-              return orientation == Orientation.portrait
-                  ? Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: _menuItems,
-                    )
-                  : Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: _menuItems,
-                    );
-            }),
-          ),
-        ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: _menuItems,
+            )),
       ),
     );
   }
@@ -93,7 +57,7 @@ class HomeScreen extends StatelessWidget {
     return Expanded(
       child: ConstrainedBox(
         constraints: BoxConstraints(
-          maxHeight: 200,
+          maxHeight: 100,
         ),
         child: Card(
           color: Theme.of(context).primaryColor,
