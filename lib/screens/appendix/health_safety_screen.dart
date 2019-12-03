@@ -10,7 +10,7 @@ class HealthSafetyScreen extends StatelessWidget {
         title: Text('Health & Safety'),
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(30),
+        padding: EdgeInsets.all(24),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
