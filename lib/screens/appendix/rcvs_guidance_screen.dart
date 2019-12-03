@@ -28,11 +28,11 @@ class RcvsGuidanceScreen extends StatelessWidget {
                     text: '(b) carry out tests upon animals under the ',
                   ),
                   TextSpan(
-                    text: 'direction',
+                    text: 'direction ',
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                   TextSpan(
-                    text: ' of a registered veterinary surgeon;',
+                    text: 'of a registered veterinary surgeon;',
                   ),
                 ],
               ),
@@ -46,11 +46,11 @@ class RcvsGuidanceScreen extends StatelessWidget {
                         '(c) administer treatment (other than by way of surgical operations) to animals under the ',
                   ),
                   TextSpan(
-                    text: 'supervision',
+                    text: 'supervision ',
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                   TextSpan(
-                    text: ' of a registered veterinary surgeon; and',
+                    text: 'of a registered veterinary surgeon; and',
                   ),
                 ],
               ),
@@ -61,14 +61,14 @@ class RcvsGuidanceScreen extends StatelessWidget {
                 children: <TextSpan>[
                   TextSpan(
                     text:
-                        '(d) perform surgical operations upon animals in accordance with the directions and under the',
+                        '(d) perform surgical operations upon animals in accordance with the directions and under the ',
                   ),
                   TextSpan(
-                    text: 'direct and continuous personal supervision',
+                    text: 'direct and continuous personal supervision ',
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                   TextSpan(
-                    text: ' of a registered veterinary surgeon',
+                    text: 'of a registered veterinary surgeon',
                   ),
                 ],
               ),
@@ -147,6 +147,9 @@ class RcvsGuidanceScreen extends StatelessWidget {
                   ),
                 ],
               ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(8),
             ),
             Text(
               'Students must always ensure that they are acting under guidance',
