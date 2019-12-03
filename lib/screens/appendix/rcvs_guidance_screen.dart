@@ -10,7 +10,7 @@ class RcvsGuidanceScreen extends StatelessWidget {
         title: Text('RCVS EMS Guidance'),
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(30),
+        padding: EdgeInsets.all(24),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
