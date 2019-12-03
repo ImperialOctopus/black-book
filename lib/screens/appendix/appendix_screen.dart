@@ -50,7 +50,7 @@ class AppendixScreen extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).push(
                   EnterExitRoute(
-                    enterPage: const BioDataScreen(),
+                    enterPage: BioDataScreen(),
                     exitPage: this,
                   ),
                 );
