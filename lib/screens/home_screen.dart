@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
                 menuItem(
                   context: context,
                   name: 'Appendix',
-                  imageAsset: 'assets/images/appendix.jpg',
+                  imageAsset: 'assets/images/books.jpg',
                   onTap: () {
                     Navigator.of(context).push(
                       SlideLeftRoute(
