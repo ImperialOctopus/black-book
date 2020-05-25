@@ -1,9 +1,10 @@
 import 'package:black_book/routes/slide_left_route.dart';
 import 'package:black_book/screens/appendix/appendix_screen.dart';
+import 'package:black_book/screens/menu/menu_item.dart';
 import 'package:flutter/material.dart';
 
-import '../model/model.dart';
-import 'checklist/checklist_screen.dart';
+import '../../model/model.dart';
+import '../checklist/checklist_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   final Model model;
@@ -22,10 +23,12 @@ class HomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                menuItem(
-                  context: context,
+                MenuItem(
                   name: 'Clinical Checklist',
-                  imageAsset: 'assets/images/checklist.jpg',
+                  child: Image.asset(
+                    'assets/images/checklist.jpg',
+                    fit: BoxFit.cover,
+                  ),
                   onTap: () {
                     Navigator.of(context).push(
                       SlideLeftRoute(
@@ -34,10 +37,12 @@ class HomeScreen extends StatelessWidget {
                     );
                   },
                 ),
-                menuItem(
-                  context: context,
+                MenuItem(
                   name: 'Appendix',
-                  imageAsset: 'assets/images/books.jpg',
+                  child: Image.asset(
+                    'assets/images/books.jpg',
+                    fit: BoxFit.cover,
+                  ),
                   onTap: () {
                     Navigator.of(context).push(
                       SlideLeftRoute(
