@@ -2,34 +2,28 @@ import 'package:flutter/material.dart';
 
 class MenuItem extends StatelessWidget {
   final double maxHeight = 200;
+  final int labelAlpha = 80;
 
   final String name;
   final Widget child;
-  final Function onTap;
+  final Widget target;
 
-  const MenuItem({this.name, this.child, this.onTap});
+  const MenuItem({this.name, this.child, this.target});
 
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(
       constraints: BoxConstraints(maxHeight: maxHeight),
-      child: Card(
-        color: Theme.of(context).primaryColor,
-        semanticContainer: true,
-        clipBehavior: Clip.antiAlias,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10.0),
-        ),
-        elevation: 5,
-        child: InkWell(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              Expanded(
-                child: child,
-              ),
-              Align(
-                alignment: Alignment.bottomRight,
+      child: InkWell(
+        child: Stack(
+          children: <Widget>[
+            Positioned.fill(child: child),
+            Positioned(
+              bottom: 0,
+              left: 0,
+              right: 0,
+              child: Container(
+                color: Theme.of(context).primaryColor.withAlpha(labelAlpha),
                 child: Padding(
                   padding: EdgeInsets.only(right: 4),
                   child: Text(
@@ -39,9 +33,13 @@ class MenuItem extends StatelessWidget {
                   ),
                 ),
               ),
-            ],
+            ),
+          ],
+        ),
+        onTap: () => Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (_) => target,
           ),
-          onTap: onTap,
         ),
       ),
     );

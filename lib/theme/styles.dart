@@ -4,7 +4,7 @@ ThemeData theme = ThemeData(
   // Define the default brightness and colors.
   brightness: Brightness.light,
   primaryColor: Colors.grey[800],
-  accentColor: Colors.purpleAccent[600],
+  accentColor: Colors.purpleAccent[100],
 
   // Define the default font family.
   fontFamily: 'Montserrat',

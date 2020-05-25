@@ -10,13 +10,13 @@ class ChecklistScreen extends StatelessWidget {
   final Model model;
   final List<Category> categories = CategoryData.categoryList;
 
-  ChecklistScreen({Key key, this.model}) : super(key: key);
+  ChecklistScreen({this.model});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Clinical Checklist'),
+        title: Text('Clinical Checklist'),
       ),
       body: ListView.separated(
         itemCount: categories.length,

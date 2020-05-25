@@ -1,4 +1,3 @@
-import 'package:black_book/routes/slide_left_route.dart';
 import 'package:black_book/screens/appendix/appendix_screen.dart';
 import 'package:black_book/screens/menu/menu_item.dart';
 import 'package:flutter/material.dart';
@@ -14,46 +13,29 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.all(10),
-        child: Center(
-          child: ConstrainedBox(
-            constraints: BoxConstraints(maxWidth: 600),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: <Widget>[
-                MenuItem(
-                  name: 'Clinical Checklist',
-                  child: Image.asset(
-                    'assets/images/checklist.jpg',
-                    fit: BoxFit.cover,
-                  ),
-                  onTap: () {
-                    Navigator.of(context).push(
-                      SlideLeftRoute(
-                        page: ChecklistScreen(model: model),
-                      ),
-                    );
-                  },
-                ),
-                MenuItem(
-                  name: 'Appendix',
-                  child: Image.asset(
-                    'assets/images/books.jpg',
-                    fit: BoxFit.cover,
-                  ),
-                  onTap: () {
-                    Navigator.of(context).push(
-                      SlideLeftRoute(
-                        page: AppendixScreen(),
-                      ),
-                    );
-                  },
-                ),
-              ],
+      body: ConstrainedBox(
+        constraints: BoxConstraints(maxWidth: 600),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            MenuItem(
+              name: 'Clinical Checklist',
+              child: Image.asset(
+                'assets/images/checklist.jpg',
+                fit: BoxFit.cover,
+              ),
+              target: ChecklistScreen(model: model),
             ),
-          ),
+            MenuItem(
+              name: 'Appendix',
+              child: Image.asset(
+                'assets/images/books.jpg',
+                fit: BoxFit.cover,
+              ),
+              target: AppendixScreen(),
+            ),
+          ],
         ),
       ),
     );
