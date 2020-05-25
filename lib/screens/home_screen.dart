@@ -83,7 +83,7 @@ class HomeScreen extends StatelessWidget {
                   child: Text(
                     name,
                     textAlign: TextAlign.end,
-                    style: Theme.of(context).primaryTextTheme.title,
+                    style: Theme.of(context).primaryTextTheme.headline6,
                   ),
                 ),
               ),
