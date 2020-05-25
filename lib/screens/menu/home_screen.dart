@@ -3,6 +3,8 @@ import 'package:black_book/screens/menu/menu_item.dart';
 import 'package:flutter/material.dart';
 
 import '../../model/model.dart';
+import '../../routes/enter_exit_route.dart';
+import '../appendix/appendix_screen.dart';
 import '../checklist/checklist_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -13,6 +15,9 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Black Book'),
+      ),
       body: ConstrainedBox(
         constraints: BoxConstraints(maxWidth: 600),
         child: Column(
@@ -25,7 +30,25 @@ class HomeScreen extends StatelessWidget {
                 'assets/images/checklist.jpg',
                 fit: BoxFit.cover,
               ),
-              target: ChecklistScreen(model: model),
+              onTap: () => Navigator.of(context).push(
+                EnterExitRoute(
+                  enterPage: ChecklistScreen(model: model),
+                  exitPage: this,
+                ),
+              ),
+            ),
+            MenuItem(
+              name: 'Practical Sign-Off',
+              child: Image.asset(
+                'assets/images/practical.jpg',
+                fit: BoxFit.cover,
+              ),
+              onTap: () => Navigator.of(context).push(
+                EnterExitRoute(
+                  enterPage: ChecklistScreen(model: model),
+                  exitPage: this,
+                ),
+              ),
             ),
             MenuItem(
               name: 'Appendix',
@@ -33,50 +56,27 @@ class HomeScreen extends StatelessWidget {
                 'assets/images/books.jpg',
                 fit: BoxFit.cover,
               ),
-              target: AppendixScreen(),
+              onTap: () => Navigator.of(context).push(
+                EnterExitRoute(
+                  enterPage: AppendixScreen(),
+                  exitPage: this,
+                ),
+              ),
+            ),
+            MenuItem(
+              name: 'Export',
+              child: Image.asset(
+                'assets/images/export.jpg',
+                fit: BoxFit.cover,
+              ),
+              onTap: () => Navigator.of(context).push(
+                EnterExitRoute(
+                  enterPage: AppendixScreen(),
+                  exitPage: this,
+                ),
+              ),
             ),
           ],
-        ),
-      ),
-    );
-  }
-
-  Widget menuItem(
-      {BuildContext context, String name, String imageAsset, Function onTap}) {
-    return ConstrainedBox(
-      constraints: BoxConstraints(maxHeight: 200),
-      child: Card(
-        color: Theme.of(context).primaryColor,
-        semanticContainer: true,
-        clipBehavior: Clip.antiAlias,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10.0),
-        ),
-        elevation: 5,
-        child: InkWell(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              Expanded(
-                child: Image.asset(
-                  imageAsset,
-                  fit: BoxFit.cover,
-                ),
-              ),
-              Align(
-                alignment: Alignment.bottomRight,
-                child: Padding(
-                  padding: EdgeInsets.only(right: 4),
-                  child: Text(
-                    name,
-                    textAlign: TextAlign.end,
-                    style: Theme.of(context).primaryTextTheme.headline6,
-                  ),
-                ),
-              ),
-            ],
-          ),
-          onTap: onTap,
         ),
       ),
     );
