@@ -1,4 +1,4 @@
-import 'package:black_book/widgets/checklist_card.dart';
+import '../../components/checklist_card.dart';
 import 'package:flutter/material.dart';
 
 import '../../model/category.dart';

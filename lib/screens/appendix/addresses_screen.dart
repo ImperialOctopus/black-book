@@ -1,4 +1,4 @@
-import 'package:black_book/widgets/hyperlink.dart';
+import '../../components/hyperlink.dart';
 import 'package:flutter/material.dart';
 
 class AddressesScreen extends StatelessWidget {
