@@ -1,6 +1,7 @@
 import 'package:black_book/screens/appendix/appendix_screen.dart';
 import 'package:black_book/screens/export/export_screen.dart';
 import 'package:black_book/screens/menu/menu_item.dart';
+import 'package:black_book/screens/signature/signature_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../model/model.dart';
@@ -46,7 +47,7 @@ class HomeScreen extends StatelessWidget {
               ),
               onTap: () => Navigator.of(context).push(
                 EnterExitRoute(
-                  enterPage: ChecklistScreen(model: model),
+                  enterPage: SignatureScreen(),
                   exitPage: this,
                 ),
               ),
@@ -64,6 +65,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
+            /*
             MenuItem(
               name: 'Export',
               child: Image.asset(
@@ -77,6 +79,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
+            */
           ],
         ),
       ),
