@@ -1,4 +1,5 @@
 import 'package:black_book/screens/appendix/appendix_screen.dart';
+import 'package:black_book/screens/export/export_screen.dart';
 import 'package:black_book/screens/menu/menu_item.dart';
 import 'package:flutter/material.dart';
 
@@ -71,7 +72,7 @@ class HomeScreen extends StatelessWidget {
               ),
               onTap: () => Navigator.of(context).push(
                 EnterExitRoute(
-                  enterPage: AppendixScreen(),
+                  enterPage: ExportScreen(),
                   exitPage: this,
                 ),
               ),
