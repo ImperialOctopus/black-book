@@ -2,7 +2,7 @@ import 'package:black_book/screens/appendix/appendix_screen.dart';
 import 'package:black_book/screens/checklist/checklist_screen.dart';
 import 'package:black_book/screens/practical/practical_screen.dart';
 import 'package:black_book/service/model_service.dart';
-import 'package:black_book/theme/styles.dart';
+import 'package:black_book/theme/style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
