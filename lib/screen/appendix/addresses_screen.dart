@@ -1,5 +1,6 @@
-import '../../component/hyperlink.dart';
 import 'package:flutter/material.dart';
+
+import '../../component/hyperlink.dart';
 
 class AddressesScreen extends StatelessWidget {
   const AddressesScreen();
