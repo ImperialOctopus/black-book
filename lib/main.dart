@@ -1,48 +1,17 @@
-import 'package:black_book/theme/styles.dart';
+import 'package:black_book/black_book_app.dart';
+import 'package:black_book/service/model_service.dart';
 import 'package:flutter/material.dart';
-
-import 'model/model.dart';
-import 'screens/menu/home_screen.dart';
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 void main() async {
-  runApp(MainApp());
-}
+  await Hive.initFlutter();
 
-class MainApp extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() {
-    return _MainAppState();
-  }
-}
+  final box = await Hive.openBox('black-book');
 
-class _MainAppState extends State<MainApp> {
-  Future<Model> _modelFuture;
+  final modelService = ModelService(box: box);
 
-  @override
-  void initState() {
-    super.initState();
-    _modelFuture = Model().init();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Black Book',
-      theme: theme,
-      home: FutureBuilder<Model>(
-          future: _modelFuture,
-          builder: (BuildContext context, AsyncSnapshot<Model> snapshot) {
-            if (snapshot.connectionState == ConnectionState.done) {
-              return HomeScreen(model: snapshot.data);
-            } else if (snapshot.hasError) {
-              return Center(
-                child: Text('Error loading saved data: ${snapshot.error}'),
-              );
-            } else {
-              //return Text(snapshot.connectionState.toString());
-              return Center(child: CircularProgressIndicator());
-            }
-          }),
-    );
-  }
+  runApp(BlackBookApp(
+    modelService: modelService,
+  ));
 }

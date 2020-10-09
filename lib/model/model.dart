@@ -7,6 +7,7 @@ class Model {
   Future<Model> init() async {
     final appDocumentDir =
         await path_provider.getApplicationDocumentsDirectory();
+    print(appDocumentDir);
     Hive.init(appDocumentDir.path);
 
     _box = await Hive.openBox('black-book');
