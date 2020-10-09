@@ -55,7 +55,8 @@ class CustomExpansionTile extends StatefulWidget {
   /// A widget to display instead of a rotating arrow icon.
   final Widget trailing;
 
-  /// Specifies if the list tile is initially expanded (true) or collapsed (false, the default).
+  /// Specifies if the list tile is initially expanded (true) or collapsed
+  /// (false, the default).
   final bool initiallyExpanded;
 
   final Color openColor;
@@ -100,8 +101,8 @@ class _CustomExpansionTileState extends State<CustomExpansionTile>
     _backgroundColor =
         _controller.drive(_backgroundColorTween.chain(_easeOutTween));
 
-    _isExpanded =
-        PageStorage.of(context)?.readState(context) ?? widget.initiallyExpanded;
+    _isExpanded = PageStorage.of(context)?.readState(context) as bool ??
+        widget.initiallyExpanded;
     if (_isExpanded) _controller.value = 1.0;
   }
 
@@ -117,7 +118,7 @@ class _CustomExpansionTileState extends State<CustomExpansionTile>
       if (_isExpanded) {
         _controller.forward();
       } else {
-        _controller.reverse().then<void>((void value) {
+        _controller.reverse().then<void>((value) {
           if (!mounted) return;
           setState(() {
             // Rebuild without widget.children.
@@ -126,12 +127,13 @@ class _CustomExpansionTileState extends State<CustomExpansionTile>
       }
       PageStorage.of(context)?.writeState(context, _isExpanded);
     });
-    if (widget.onExpansionChanged != null)
+    if (widget.onExpansionChanged != null) {
       widget.onExpansionChanged(_isExpanded);
+    }
   }
 
   Widget _buildChildren(BuildContext context, Widget child) {
-    final Color borderSideColor = _borderColor.value ?? Colors.transparent;
+    final borderSideColor = _borderColor.value ?? Colors.transparent;
 
     return Container(
       decoration: BoxDecoration(
@@ -172,7 +174,7 @@ class _CustomExpansionTileState extends State<CustomExpansionTile>
 
   @override
   void didChangeDependencies() {
-    final ThemeData theme = Theme.of(context);
+    final theme = Theme.of(context);
     _borderColorTween..end = theme.dividerColor;
     _headerColorTween
       ..begin = theme.textTheme.subtitle1.color
@@ -186,7 +188,7 @@ class _CustomExpansionTileState extends State<CustomExpansionTile>
 
   @override
   Widget build(BuildContext context) {
-    final bool closed = !_isExpanded && _controller.isDismissed;
+    final closed = !_isExpanded && _controller.isDismissed;
     return AnimatedBuilder(
       animation: _controller.view,
       builder: _buildChildren,

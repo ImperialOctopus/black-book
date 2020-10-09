@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../../data/category_data.dart';
 import '../../model/category.dart';
 import '../../model/model.dart';
-import 'checklist_category_screen.dart';
 
 class ChecklistScreen extends StatelessWidget {
   final Model model;
@@ -19,25 +18,16 @@ class ChecklistScreen extends StatelessWidget {
       ),
       body: ListView.separated(
         itemCount: categories.length,
-        itemBuilder: (BuildContext context, int index) {
+        itemBuilder: (context, index) {
           return ListTile(
             title: Text(categories[index].name),
             leading: categories[index].icon,
             trailing: Icon(Icons.keyboard_arrow_right),
-            onTap: () {
-              Navigator.of(context).push(
-                EnterExitRoute(
-                  enterPage: ChecklistCategoryScreen(
-                      model: model, category: categories[index]),
-                  exitPage: this,
-                ),
-              );
-            },
+            onTap: () => Navigator.of(context)
+                .pushNamed('/checklist/category', arguments: index),
           );
         },
-        separatorBuilder: (BuildContext context, int index) {
-          return Divider();
-        },
+        separatorBuilder: (context, index) => Divider(),
       ),
     );
   }

@@ -2,7 +2,7 @@ import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart' as path_provider;
 
 class Model {
-  Box _box;
+  Box<List<int>> _box;
 
   Future<Model> init() async {
     final appDocumentDir =
@@ -10,7 +10,7 @@ class Model {
     print(appDocumentDir);
     Hive.init(appDocumentDir.path);
 
-    _box = await Hive.openBox('black-book');
+    _box = await Hive.openBox<List<int>>('black-book');
     return this;
   }
 

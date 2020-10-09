@@ -10,8 +10,8 @@ class BioDataScreen extends StatefulWidget {
 class _BioDataScreenState extends State<BioDataScreen> {
   @override
   Widget build(BuildContext context) {
-    double shortestSide = MediaQuery.of(context).size.shortestSide;
-    final bool useMobileLayout = shortestSide < 600;
+    final shortestSide = MediaQuery.of(context).size.shortestSide;
+    final useMobileLayout = shortestSide < 600;
 
     return Scaffold(
       appBar: AppBar(
@@ -24,8 +24,8 @@ class _BioDataScreenState extends State<BioDataScreen> {
   Widget _buildMobile() {
     return ListView.builder(
       itemCount: bioData.length,
-      itemBuilder: (BuildContext context, int index) {
-        final BioData _bioData = bioData[index];
+      itemBuilder: (context, index) {
+        final _bioData = bioData[index];
         return ExpansionTile(
           title: Text(_bioData.species),
           children: <Widget>[
@@ -80,8 +80,8 @@ class _BioDataScreenState extends State<BioDataScreen> {
         ],
         rows: List<DataRow>.generate(
           bioData.length,
-          (int index) {
-            BioData _bioData = bioData[index];
+          (index) {
+            final _bioData = bioData[index];
             return DataRow.byIndex(index: index, cells: <DataCell>[
               DataCell(Text('${_bioData.species}')),
               DataCell(Text('${_bioData.tempString}')),

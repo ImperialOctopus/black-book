@@ -1,10 +1,11 @@
-import 'package:black_book/data/progress_icons.dart';
-import 'package:black_book/model/category.dart';
-import 'package:black_book/model/item.dart';
-import 'package:black_book/model/model.dart';
-import 'package:black_book/model/subcategory.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../data/progress_icons.dart';
+import '../model/category.dart';
+import '../model/item.dart';
+import '../model/model.dart';
+import '../model/subcategory.dart';
 
 class ChecklistCard extends StatefulWidget {
   final Model model;
@@ -21,7 +22,7 @@ class _ChecklistCardState extends State<ChecklistCard> {
   Widget build(BuildContext context) {
     return ListView(
       children: List<Widget>.generate(widget.category.subcategories.length,
-          (int i) => buildSubcategory(widget.category.subcategories[i])),
+          (i) => buildSubcategory(widget.category.subcategories[i])),
     );
   }
 
@@ -35,14 +36,14 @@ class _ChecklistCardState extends State<ChecklistCard> {
             title: Text(subcategory.name),
           ),
           ...List<Widget>.generate(subcategory.items.length,
-              (int i) => buildListItem(subcategory.items[i]))
+              (i) => buildListItem(subcategory.items[i]))
         ],
       ),
     );
   }
 
   Widget buildListItem(Item item) {
-    List<int> _progress = item.getProgress(widget.model);
+    final _progress = item.getProgress(widget.model);
     return ListTile(
       title: Text(
         item.name,

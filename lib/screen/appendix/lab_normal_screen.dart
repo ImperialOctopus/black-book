@@ -44,14 +44,14 @@ class _LabNormalScreenState extends State<LabNormalScreen> {
                   style: TextStyle(color: Colors.white),
                   selectedItemBuilder: (_) => List<Widget>.generate(
                     labReferences.length,
-                    (int index) => Text(
+                    (index) => Text(
                       labReferences[index].name,
                       style: TextStyle(color: Colors.white, height: 2.6),
                     ),
                   ),
                   items: List<DropdownMenuItem<LabReferenceSet>>.generate(
                     labReferences.length,
-                    (int index) => DropdownMenuItem(
+                    (index) => DropdownMenuItem(
                       value: labReferences[index],
                       child: Text(
                         labReferences[index].name,
@@ -59,7 +59,7 @@ class _LabNormalScreenState extends State<LabNormalScreen> {
                       ),
                     ),
                   ),
-                  onChanged: (LabReferenceSet newValue) {
+                  onChanged: (newValue) {
                     setState(() {
                       _currentSet = newValue;
                     });
@@ -82,9 +82,7 @@ class _LabNormalScreenState extends State<LabNormalScreen> {
   }
 
   List<ListTile> _buildList(LabReferenceSet referenceSet) {
-    return referenceSet.list
-        .map((LabReference reference) => _buildRow(reference))
-        .toList();
+    return referenceSet.list.map(_buildRow).toList();
   }
 
   ListTile _buildRow(LabReference reference) {

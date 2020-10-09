@@ -13,7 +13,8 @@ class ModelService {
       throw StateError('Box not open');
     }
 
-    return _box.get(reference);
+    return _box.get(reference, defaultValue: <int>[0, 0, 0])
+        as Future<List<int>>;
   }
 
   Future<void> put(String reference, List<int> progress) async {

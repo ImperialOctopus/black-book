@@ -1,13 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'addresses_screen.dart';
-import 'bio_data_screen.dart';
-import 'body_weight_screen.dart';
-import 'lab_normal_screen.dart';
-import 'lab_profiles_screen.dart';
-import 'rcvs_guidance_screen.dart';
-import 'health_safety_screen.dart';
-
 class AppendixScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -23,84 +15,49 @@ class AppendixScreen extends StatelessWidget {
               title: const Text('Health & Safety'),
               trailing: Icon(Icons.keyboard_arrow_right),
               onTap: () {
-                Navigator.of(context).push(
-                  EnterExitRoute(
-                    enterPage: const HealthSafetyScreen(),
-                    exitPage: this,
-                  ),
-                );
+                Navigator.of(context).pushNamed('/appendix/safety');
               },
             ),
             ListTile(
               title: const Text('RCVS EMS Guidance'),
               trailing: Icon(Icons.keyboard_arrow_right),
               onTap: () {
-                Navigator.of(context).push(
-                  EnterExitRoute(
-                    enterPage: const RcvsGuidanceScreen(),
-                    exitPage: this,
-                  ),
-                );
+                Navigator.of(context).pushNamed('/appendix/rcvs');
               },
             ),
             ListTile(
               title: const Text('Biological Data'),
               trailing: Icon(Icons.keyboard_arrow_right),
               onTap: () {
-                Navigator.of(context).push(
-                  EnterExitRoute(
-                    enterPage: BioDataScreen(),
-                    exitPage: this,
-                  ),
-                );
+                Navigator.of(context).pushNamed('/appendix/biodata');
               },
             ),
             ListTile(
               title: const Text('Body Weight Ratios'),
               trailing: Icon(Icons.keyboard_arrow_right),
               onTap: () {
-                Navigator.of(context).push(
-                  EnterExitRoute(
-                    enterPage: const BodyWeightScreen(),
-                    exitPage: this,
-                  ),
-                );
+                Navigator.of(context).pushNamed('/appendix/weight');
               },
             ),
             ListTile(
               title: const Text('Laboratory Samples & Profiles'),
               trailing: Icon(Icons.keyboard_arrow_right),
               onTap: () {
-                Navigator.of(context).push(
-                  EnterExitRoute(
-                    enterPage: const LabProfilesScreen(),
-                    exitPage: this,
-                  ),
-                );
+                Navigator.of(context).pushNamed('/appendix/labprofiles');
               },
             ),
             ListTile(
               title: const Text('Normal Laboratory Values'),
               trailing: Icon(Icons.keyboard_arrow_right),
               onTap: () {
-                Navigator.of(context).push(
-                  EnterExitRoute(
-                    enterPage: const LabNormalScreen(),
-                    exitPage: this,
-                  ),
-                );
+                Navigator.of(context).pushNamed('/appendix/labnormal');
               },
             ),
             ListTile(
               title: const Text('Useful Addresses'),
               trailing: Icon(Icons.keyboard_arrow_right),
               onTap: () {
-                Navigator.of(context).push(
-                  EnterExitRoute(
-                    enterPage: const AddressesScreen(),
-                    exitPage: this,
-                  ),
-                );
+                Navigator.of(context).pushNamed('/appendix/addresses');
               },
             ),
           ],

@@ -1,6 +1,6 @@
-import '../../component/checklist_card.dart';
 import 'package:flutter/material.dart';
 
+import '../../component/checklist_card.dart';
 import '../../model/category.dart';
 import '../../model/model.dart';
 

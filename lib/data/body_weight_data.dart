@@ -1,4 +1,4 @@
-const List<MassAreaMap> bodyWeightDataDog = const <MassAreaMap>[
+const List<MassAreaMap> bodyWeightDataDog = <MassAreaMap>[
   MassAreaMap('0.5', '0.06'),
   MassAreaMap('1.0', '0.10'),
   MassAreaMap('2.0', '0.15'),
@@ -51,7 +51,7 @@ const List<MassAreaMap> bodyWeightDataDog = const <MassAreaMap>[
   MassAreaMap('49.0', '1.34'),
   MassAreaMap('50.0', '1.36'),
 ];
-const List<MassAreaMap> bodyWeightDataCat = const <MassAreaMap>[
+const List<MassAreaMap> bodyWeightDataCat = <MassAreaMap>[
   MassAreaMap('2.0', '0.159'),
   MassAreaMap('2.2', '0.169'),
   MassAreaMap('2.4', '0.179'),

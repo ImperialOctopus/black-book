@@ -1,9 +1,6 @@
-import 'package:black_book/screen/practical/practical_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../model/model.dart';
-import '../appendix/appendix_screen.dart';
-import '../checklist/checklist_screen.dart';
 import 'menu_item.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -29,12 +26,7 @@ class HomeScreen extends StatelessWidget {
                 'assets/images/checklist.jpg',
                 fit: BoxFit.cover,
               ),
-              onTap: () => Navigator.of(context).push(
-                EnterExitRoute(
-                  enterPage: ChecklistScreen(model: model),
-                  exitPage: this,
-                ),
-              ),
+              onTap: () => Navigator.of(context).pushNamed('/checklist'),
             ),
             MenuItem(
               name: 'Practical Sign-Off',
@@ -42,12 +34,7 @@ class HomeScreen extends StatelessWidget {
                 'assets/images/practical.jpg',
                 fit: BoxFit.cover,
               ),
-              onTap: () => Navigator.of(context).push(
-                EnterExitRoute(
-                  enterPage: PracticalScreen(),
-                  exitPage: this,
-                ),
-              ),
+              onTap: () => Navigator.of(context).pushNamed('/practical'),
             ),
             MenuItem(
               name: 'Appendix',
@@ -55,12 +42,7 @@ class HomeScreen extends StatelessWidget {
                 'assets/images/books.jpg',
                 fit: BoxFit.cover,
               ),
-              onTap: () => Navigator.of(context).push(
-                EnterExitRoute(
-                  enterPage: AppendixScreen(),
-                  exitPage: this,
-                ),
-              ),
+              onTap: () => Navigator.of(context).pushNamed('/appendix'),
             ),
             /*
             MenuItem(

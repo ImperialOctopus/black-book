@@ -7,7 +7,7 @@ class MenuItem extends StatelessWidget {
   final String name;
   final Widget child;
   final int flex;
-  final Function onTap;
+  final Function() onTap;
 
   const MenuItem({this.name, this.child, this.flex = 1, this.onTap});
 

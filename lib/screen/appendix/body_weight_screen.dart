@@ -93,9 +93,7 @@ class BodyWeightScreen extends StatelessWidget {
   }
 
   List<ListTile> _buildList(List<MassAreaMap> map) {
-    return map
-        .map((MassAreaMap entry) => _buildRow(entry.mass, entry.area))
-        .toList();
+    return map.map((entry) => _buildRow(entry.mass, entry.area)).toList();
   }
 
   ListTile _buildRow(String first, String second) {

@@ -1,11 +1,11 @@
-import 'package:black_book/data/progress_icons.dart';
-import 'package:black_book/model/category.dart';
-import 'package:black_book/model/item.dart';
-import 'package:black_book/model/model.dart';
-import 'package:black_book/model/subcategory.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../data/progress_icons.dart';
+import '../model/category.dart';
+import '../model/item.dart';
+import '../model/model.dart';
+import '../model/subcategory.dart';
 import 'custom_expansion_tile.dart';
 
 class ChecklistExpansion extends StatefulWidget {
@@ -26,7 +26,7 @@ class _ChecklistExpansionState extends State<ChecklistExpansion> {
       children: ListTile.divideTiles(
         context: context,
         tiles: List<Widget>.generate(widget.category.subcategories.length,
-            (int i) => buildSubcategory(widget.category.subcategories[i])),
+            (i) => buildSubcategory(widget.category.subcategories[i])),
       ).toList(),
     );
   }
@@ -40,13 +40,13 @@ class _ChecklistExpansionState extends State<ChecklistExpansion> {
       children: ListTile.divideTiles(
         context: context,
         tiles: List<Widget>.generate(subcategory.items.length,
-            (int i) => buildListItem(subcategory.items[i])),
+            (i) => buildListItem(subcategory.items[i])),
       ).toList(),
     );
   }
 
   Widget buildListItem(Item item) {
-    List<int> _progress = item.getProgress(widget.model);
+    final _progress = item.getProgress(widget.model);
     return ListTile(
       title: Text(
         item.name,
