@@ -1,13 +1,11 @@
-import 'package:black_book/screens/appendix/appendix_screen.dart';
-import 'package:black_book/screens/export/export_screen.dart';
-import 'package:black_book/screens/menu/menu_item.dart';
-import 'package:black_book/screens/signature/signature_screen.dart';
+import 'package:black_book/screens/practical/practical_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../model/model.dart';
 import '../../routes/enter_exit_route.dart';
 import '../appendix/appendix_screen.dart';
 import '../checklist/checklist_screen.dart';
+import 'menu_item.dart';
 
 class HomeScreen extends StatelessWidget {
   final Model model;
@@ -47,7 +45,7 @@ class HomeScreen extends StatelessWidget {
               ),
               onTap: () => Navigator.of(context).push(
                 EnterExitRoute(
-                  enterPage: SignatureScreen(),
+                  enterPage: PracticalScreen(),
                   exitPage: this,
                 ),
               ),

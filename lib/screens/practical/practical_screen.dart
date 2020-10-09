@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class SignatureScreen extends StatelessWidget {
+class PracticalScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
