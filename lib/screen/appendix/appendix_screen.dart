@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../routes/enter_exit_route.dart';
 import 'addresses_screen.dart';
 import 'bio_data_screen.dart';
 import 'body_weight_screen.dart';

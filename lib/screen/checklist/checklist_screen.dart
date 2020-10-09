@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../../data/category_data.dart';
 import '../../model/category.dart';
 import '../../model/model.dart';
-import '../../routes/enter_exit_route.dart';
 import 'checklist_category_screen.dart';
 
 class ChecklistScreen extends StatelessWidget {

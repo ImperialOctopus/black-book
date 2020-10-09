@@ -1,4 +1,3 @@
-import 'package:black_book/model/item_progress.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 
