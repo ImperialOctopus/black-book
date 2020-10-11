@@ -4,20 +4,24 @@ import 'package:flutter/material.dart';
 import '../data/progress_icons.dart';
 import '../model/category.dart';
 import '../model/item.dart';
-import '../model/model.dart';
 import '../model/subcategory.dart';
 
 class ChecklistCard extends StatefulWidget {
-  final Model model;
   final Category category;
+  final List<int> startingProgress;
 
-  const ChecklistCard({Key key, this.model, this.category}) : super(key: key);
+  const ChecklistCard({
+    this.category,
+    this.startingProgress,
+  });
 
   @override
   State<StatefulWidget> createState() => _ChecklistCardState();
 }
 
 class _ChecklistCardState extends State<ChecklistCard> {
+  final List<int> progress;
+
   @override
   Widget build(BuildContext context) {
     return ListView(

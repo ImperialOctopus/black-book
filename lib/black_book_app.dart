@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'bloc/category/category_cubit.dart';
 import 'screen/appendix/addresses_screen.dart';
 import 'screen/appendix/appendix_screen.dart';
 import 'screen/appendix/bio_data_screen.dart';
@@ -23,11 +24,20 @@ class BlackBookApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiRepositoryProvider(providers: [
-      RepositoryProvider<ModelService>.value(
-        value: modelService,
-      )
-    ], child: AppView());
+    return MultiRepositoryProvider(
+        providers: [
+          RepositoryProvider<ModelService>.value(
+            value: modelService,
+          )
+        ],
+        child: MultiBlocProvider(
+          providers: [
+            BlocProvider<CategoryCubit>(
+              create: (context) => CategoryCubit(),
+            ),
+          ],
+          child: AppView(),
+        ));
   }
 }
 
