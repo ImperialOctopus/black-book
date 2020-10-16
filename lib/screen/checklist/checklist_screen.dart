@@ -1,4 +1,6 @@
+import 'package:black_book/bloc/category/category_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../data/category_data.dart';
 import '../../model/category.dart';
@@ -20,12 +22,13 @@ class ChecklistScreen extends StatelessWidget {
         itemCount: categories.length,
         itemBuilder: (context, index) {
           return ListTile(
-            title: Text(categories[index].name),
-            leading: categories[index].icon,
-            trailing: Icon(Icons.keyboard_arrow_right),
-            onTap: () => Navigator.of(context)
-                .pushNamed('/checklist/category', arguments: index),
-          );
+              title: Text(categories[index].name),
+              leading: categories[index].icon,
+              trailing: Icon(Icons.keyboard_arrow_right),
+              onTap: () {
+                BlocProvider.of<CategoryCubit>(context).setIndex(index);
+                Navigator.of(context).pushNamed('/checklist/category');
+              });
         },
         separatorBuilder: (context, index) => Divider(),
       ),

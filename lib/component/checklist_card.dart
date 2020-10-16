@@ -1,27 +1,23 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../data/progress_icons.dart';
 import '../model/category.dart';
 import '../model/item.dart';
 import '../model/subcategory.dart';
+import '../service/model_service.dart';
 
 class ChecklistCard extends StatefulWidget {
   final Category category;
-  final List<int> startingProgress;
 
-  const ChecklistCard({
-    this.category,
-    this.startingProgress,
-  });
+  const ChecklistCard({@required this.category});
 
   @override
   State<StatefulWidget> createState() => _ChecklistCardState();
 }
 
 class _ChecklistCardState extends State<ChecklistCard> {
-  final List<int> progress;
-
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -47,7 +43,9 @@ class _ChecklistCardState extends State<ChecklistCard> {
   }
 
   Widget buildListItem(Item item) {
-    final _progress = item.getProgress(widget.model);
+    final _modelService = RepositoryProvider.of<ModelService>(context);
+    final _progress = _modelService.get(item.reference);
+
     return ListTile(
       title: Text(
         item.name,
@@ -64,7 +62,7 @@ class _ChecklistCardState extends State<ChecklistCard> {
                 if (_progress[0] > 2) {
                   _progress[0] = 0;
                 }
-                item.setProgress(widget.model, _progress);
+                _modelService.put(item.reference, _progress);
               },
             ),
           ),
@@ -76,7 +74,7 @@ class _ChecklistCardState extends State<ChecklistCard> {
                 if (_progress[1] > 2) {
                   _progress[1] = 0;
                 }
-                item.setProgress(widget.model, _progress);
+                _modelService.put(item.reference, _progress);
               },
             ),
           ),
@@ -88,7 +86,7 @@ class _ChecklistCardState extends State<ChecklistCard> {
                 if (_progress[2] > 2) {
                   _progress[2] = 0;
                 }
-                item.setProgress(widget.model, _progress);
+                _modelService.put(item.reference, _progress);
               },
             ),
           ),
