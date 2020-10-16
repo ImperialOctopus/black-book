@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_catching_errors
-
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 
@@ -14,12 +12,14 @@ class ModelService {
     if (boxClosed) {
       throw StateError('Box not open');
     }
+    // Get data from storage.
+    final dynamic list = _box.get(reference);
 
-    try {
-      final l =
-          _box.get(reference, defaultValue: const <int>[0, 0, 0]) as List<int>;
-    } on TypeError {
-      return [0, 0, 0];
+    // Check it's an int list with at least 3 elements.
+    if (list is List<int> && list.length >= 3) {
+      return list;
+    } else {
+      return <int>[0, 0, 0];
     }
   }
 

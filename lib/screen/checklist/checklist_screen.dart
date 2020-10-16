@@ -1,7 +1,7 @@
-import 'package:black_book/bloc/category/category_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../bloc/category/category_cubit.dart';
 import '../../data/category_data.dart';
 import '../../model/category.dart';
 import '../../model/model.dart';
