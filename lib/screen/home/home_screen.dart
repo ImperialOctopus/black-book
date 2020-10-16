@@ -14,37 +14,38 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('Black Book'),
       ),
-      body: ConstrainedBox(
-        constraints: BoxConstraints(maxWidth: 600),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            MenuItem(
-              name: 'Clinical Checklist',
-              child: Image.asset(
-                'assets/images/checklist.jpg',
-                fit: BoxFit.cover,
+      body: Center(
+        child: ConstrainedBox(
+          constraints: BoxConstraints(maxWidth: 600),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              MenuItem(
+                name: 'Clinical Checklist',
+                child: Image.asset(
+                  'assets/images/checklist.jpg',
+                  fit: BoxFit.cover,
+                ),
+                onTap: () => Navigator.of(context).pushNamed('/checklist'),
               ),
-              onTap: () => Navigator.of(context).pushNamed('/checklist'),
-            ),
-            MenuItem(
-              name: 'Practical Sign-Off',
-              child: Image.asset(
-                'assets/images/practical.jpg',
-                fit: BoxFit.cover,
+              MenuItem(
+                name: 'Practical Sign-Off',
+                child: Image.asset(
+                  'assets/images/practical.jpg',
+                  fit: BoxFit.cover,
+                ),
+                onTap: () => Navigator.of(context).pushNamed('/practical'),
               ),
-              onTap: () => Navigator.of(context).pushNamed('/practical'),
-            ),
-            MenuItem(
-              name: 'Appendix',
-              child: Image.asset(
-                'assets/images/books.jpg',
-                fit: BoxFit.cover,
+              MenuItem(
+                name: 'Appendix',
+                child: Image.asset(
+                  'assets/images/books.jpg',
+                  fit: BoxFit.cover,
+                ),
+                onTap: () => Navigator.of(context).pushNamed('/appendix'),
               ),
-              onTap: () => Navigator.of(context).pushNamed('/appendix'),
-            ),
-            /*
+              /*
             MenuItem(
               name: 'Export',
               child: Image.asset(
@@ -59,7 +60,8 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             */
-          ],
+            ],
+          ),
         ),
       ),
     );
