@@ -8,16 +8,16 @@ import '../model/item.dart';
 import '../model/subcategory.dart';
 import '../service/model_service.dart';
 
-class ChecklistCard extends StatefulWidget {
+class ChecklistCards extends StatefulWidget {
   final Category category;
 
-  const ChecklistCard({@required this.category});
+  const ChecklistCards({@required this.category});
 
   @override
-  State<StatefulWidget> createState() => _ChecklistCardState();
+  State<StatefulWidget> createState() => _ChecklistCardsState();
 }
 
-class _ChecklistCardState extends State<ChecklistCard> {
+class _ChecklistCardsState extends State<ChecklistCards> {
   @override
   Widget build(BuildContext context) {
     return ListView(

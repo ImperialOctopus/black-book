@@ -5,6 +5,10 @@ class PracticalScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: Text('Practical Sign-Off')),
-        body: Center(child: Text('Signature Page')));
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [],
+        ));
   }
 }
