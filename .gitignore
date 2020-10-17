@@ -33,6 +33,8 @@ doc/api/
 .pub-cache/
 .pub/
 
+**/lib/generated_plugin_registrant.dart
+
 # Android related
 **/android/**/gradle-wrapper.jar
 **/android/.gradle
@@ -67,6 +69,7 @@ doc/api/
 **/ios/Flutter/flutter_assets/
 **/ios/ServiceDefinitions.json
 **/ios/Runner/GeneratedPluginRegistrant.*
+**/ios/Flutter/flutter_export_environment.sh
 
 # Exceptions to above rules.
 !**/ios/**/default.mode1v3
