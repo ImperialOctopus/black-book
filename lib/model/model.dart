@@ -2,7 +2,7 @@ import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart' as path_provider;
 
 class Model {
-  Box<List<int>> _box;
+  late Box<List<int>> _box;
 
   Future<Model> init() async {
     final appDocumentDir =

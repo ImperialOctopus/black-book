@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 import 'model.dart';
 
 class Item {
@@ -8,9 +6,9 @@ class Item {
   final String reference;
 
   const Item({
-    @required this.name,
+    required this.name,
     this.essential = false,
-    @required this.reference,
+    required this.reference,
   });
 
   List<int> getProgress(Model _model) {
