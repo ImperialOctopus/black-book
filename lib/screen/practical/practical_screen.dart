@@ -8,7 +8,9 @@ class PracticalScreen extends StatelessWidget {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [],
+          children: [
+            OutlinedButton(),
+          ],
         ));
   }
 }
