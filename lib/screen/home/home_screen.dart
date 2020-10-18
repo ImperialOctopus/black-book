@@ -6,7 +6,7 @@ import 'menu_item.dart';
 class HomeScreen extends StatelessWidget {
   final Model model;
 
-  HomeScreen({Key key, this.model}) : super(key: key);
+  HomeScreen({required this.model});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class HomeScreen extends StatelessWidget {
                   'assets/images/checklist.jpg',
                   fit: BoxFit.cover,
                 ),
-                onTap: () => Navigator.of(context).pushNamed('/checklist'),
+                onTap: () => Navigator.of(context)?.pushNamed('/checklist'),
               ),
               MenuItem(
                 name: 'Practical Sign-Off',
@@ -35,7 +35,7 @@ class HomeScreen extends StatelessWidget {
                   'assets/images/practical.jpg',
                   fit: BoxFit.cover,
                 ),
-                onTap: () => Navigator.of(context).pushNamed('/practical'),
+                onTap: () => Navigator.of(context)?.pushNamed('/practical'),
               ),
               MenuItem(
                 name: 'Appendix',
@@ -43,7 +43,7 @@ class HomeScreen extends StatelessWidget {
                   'assets/images/books.jpg',
                   fit: BoxFit.cover,
                 ),
-                onTap: () => Navigator.of(context).pushNamed('/appendix'),
+                onTap: () => Navigator.of(context)?.pushNamed('/appendix'),
               ),
               /*
             MenuItem(

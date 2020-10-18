@@ -7,9 +7,10 @@ class MenuItem extends StatelessWidget {
   final String name;
   final Widget child;
   final int flex;
-  final Function() onTap;
+  final Function()? onTap;
 
-  const MenuItem({this.name, this.child, this.flex = 1, this.onTap});
+  const MenuItem(
+      {required this.name, required this.child, this.flex = 1, this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -26,13 +27,13 @@ class MenuItem extends StatelessWidget {
                 left: 0,
                 right: 0,
                 child: Container(
-                  color: Theme.of(context).primaryColor.withAlpha(labelAlpha),
+                  color: Theme.of(context)?.primaryColor.withAlpha(labelAlpha),
                   child: Padding(
                     padding: EdgeInsets.only(right: 4),
                     child: Text(
                       name,
                       textAlign: TextAlign.end,
-                      style: Theme.of(context).primaryTextTheme.headline6,
+                      style: Theme.of(context)?.primaryTextTheme.headline6,
                     ),
                   ),
                 ),
