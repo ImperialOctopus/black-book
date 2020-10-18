@@ -1,12 +1,9 @@
-import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 
 class ModelService {
   final Box _box;
 
-  ModelService({@required Box box})
-      : assert(box != null),
-        _box = box;
+  ModelService({required Box box}) : _box = box;
 
   List<int> get(String reference) {
     if (boxClosed) {
