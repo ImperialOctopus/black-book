@@ -20,7 +20,7 @@ import 'theme/style.dart';
 class BlackBookApp extends StatelessWidget {
   final ModelService modelService;
 
-  const BlackBookApp({@required this.modelService});
+  const BlackBookApp({required this.modelService});
 
   @override
   Widget build(BuildContext context) {

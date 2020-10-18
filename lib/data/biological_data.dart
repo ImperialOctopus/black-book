@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class BioData {
   final String species;
 
@@ -19,17 +17,17 @@ class BioData {
   final num gestationSort;
 
   const BioData({
-    @required this.species,
-    @required this.tempString,
-    @required this.tempSort,
-    @required this.heartString,
-    @required this.heartSort,
-    @required this.respString,
-    @required this.respSort,
-    @required this.oestrusString,
-    @required this.oestrusSort,
-    @required this.gestationString,
-    @required this.gestationSort,
+    required this.species,
+    required this.tempString,
+    required this.tempSort,
+    required this.heartString,
+    required this.heartSort,
+    required this.respString,
+    required this.respSort,
+    required this.oestrusString,
+    required this.oestrusSort,
+    required this.gestationString,
+    required this.gestationSort,
   });
 }
 

@@ -11,7 +11,7 @@ import '../service/model_service.dart';
 class ChecklistCards extends StatefulWidget {
   final Category category;
 
-  const ChecklistCards({@required this.category});
+  const ChecklistCards({required this.category});
 
   @override
   State<StatefulWidget> createState() => _ChecklistCardsState();
@@ -55,7 +55,7 @@ class _ChecklistCardsState extends State<ChecklistCards> {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           IconButton(
-            icon: ProgressIcons.intMap[_progress[0]],
+            icon: ProgressIcons.intMap[_progress[0]] ?? Container(),
             onPressed: () => setState(
               () {
                 _progress[0] += 1;
@@ -67,7 +67,7 @@ class _ChecklistCardsState extends State<ChecklistCards> {
             ),
           ),
           IconButton(
-            icon: ProgressIcons.intMap[_progress[1]],
+            icon: ProgressIcons.intMap[_progress[1]] ?? Container(),
             onPressed: () => setState(
               () {
                 _progress[1] += 1;
@@ -79,7 +79,7 @@ class _ChecklistCardsState extends State<ChecklistCards> {
             ),
           ),
           IconButton(
-            icon: ProgressIcons.intMap[_progress[2]],
+            icon: ProgressIcons.intMap[_progress[2]] ?? Container(),
             onPressed: () => setState(
               () {
                 _progress[2] += 1;

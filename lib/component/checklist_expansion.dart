@@ -12,8 +12,7 @@ class ChecklistExpansion extends StatefulWidget {
   final Model model;
   final Category category;
 
-  const ChecklistExpansion({Key key, this.model, this.category})
-      : super(key: key);
+  const ChecklistExpansion({required this.model, required this.category});
 
   @override
   State<StatefulWidget> createState() => _ChecklistExpansionState();
@@ -56,7 +55,7 @@ class _ChecklistExpansionState extends State<ChecklistExpansion> {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           IconButton(
-            icon: ProgressIcons.intMap[_progress[0]],
+            icon: ProgressIcons.intMap[_progress[0]] ?? Container(),
             onPressed: () => setState(
               () {
                 _progress[0] += 1;
@@ -68,7 +67,7 @@ class _ChecklistExpansionState extends State<ChecklistExpansion> {
             ),
           ),
           IconButton(
-            icon: ProgressIcons.intMap[_progress[1]],
+            icon: ProgressIcons.intMap[_progress[1]] ?? Container(),
             onPressed: () => setState(
               () {
                 _progress[1] += 1;
@@ -80,7 +79,7 @@ class _ChecklistExpansionState extends State<ChecklistExpansion> {
             ),
           ),
           IconButton(
-            icon: ProgressIcons.intMap[_progress[2]],
+            icon: ProgressIcons.intMap[_progress[2]] ?? Container(),
             onPressed: () => setState(
               () {
                 _progress[2] += 1;

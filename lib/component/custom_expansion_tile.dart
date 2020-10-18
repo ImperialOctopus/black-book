@@ -9,9 +9,8 @@ const Duration _kExpand = Duration(milliseconds: 200);
 
 class CustomExpansionTile extends StatefulWidget {
   const CustomExpansionTile({
-    Key key,
     this.leading,
-    @required this.title,
+    required this.title,
     this.subtitle,
     this.backgroundColor,
     this.onExpansionChanged,
@@ -19,13 +18,12 @@ class CustomExpansionTile extends StatefulWidget {
     this.trailing,
     this.initiallyExpanded = false,
     this.openColor,
-  })  : assert(initiallyExpanded != null),
-        super(key: key);
+  });
 
   /// A widget to display before the title.
   ///
   /// Typically a [CircleAvatar] widget.
-  final Widget leading;
+  final Widget? leading;
 
   /// The primary content of the list item.
   ///
@@ -35,14 +33,14 @@ class CustomExpansionTile extends StatefulWidget {
   /// Additional content displayed below the title.
   ///
   /// Typically a [Text] widget.
-  final Widget subtitle;
+  final Widget? subtitle;
 
   /// Called when the tile expands or collapses.
   ///
   /// When the tile starts expanding, this function is called with the value
   /// true. When the tile starts collapsing, this function is called with
   /// the value false.
-  final ValueChanged<bool> onExpansionChanged;
+  final ValueChanged<bool>? onExpansionChanged;
 
   /// The widgets that are displayed when the tile expands.
   ///
@@ -50,16 +48,16 @@ class CustomExpansionTile extends StatefulWidget {
   final List<Widget> children;
 
   /// The color to display behind the sublist when expanded.
-  final Color backgroundColor;
+  final Color? backgroundColor;
 
   /// A widget to display instead of a rotating arrow icon.
-  final Widget trailing;
+  final Widget? trailing;
 
   /// Specifies if the list tile is initially expanded (true) or collapsed
   /// (false, the default).
   final bool initiallyExpanded;
 
-  final Color openColor;
+  final Color? openColor;
 
   @override
   _CustomExpansionTileState createState() => _CustomExpansionTileState();
@@ -79,13 +77,13 @@ class _CustomExpansionTileState extends State<CustomExpansionTile>
   final ColorTween _iconColorTween = ColorTween();
   final ColorTween _backgroundColorTween = ColorTween();
 
-  AnimationController _controller;
-  Animation<double> _iconTurns;
-  Animation<double> _heightFactor;
-  Animation<Color> _borderColor;
-  Animation<Color> _headerColor;
-  Animation<Color> _iconColor;
-  Animation<Color> _backgroundColor;
+  late AnimationController _controller;
+  late Animation<double> _iconTurns;
+  late Animation<double> _heightFactor;
+  late Animation<Color?> _borderColor;
+  late Animation<Color?> _headerColor;
+  late Animation<Color?> _iconColor;
+  late Animation<Color?> _backgroundColor;
 
   bool _isExpanded = false;
 
@@ -101,8 +99,8 @@ class _CustomExpansionTileState extends State<CustomExpansionTile>
     _backgroundColor =
         _controller.drive(_backgroundColorTween.chain(_easeOutTween));
 
-    _isExpanded = PageStorage.of(context)?.readState(context) as bool ??
-        widget.initiallyExpanded;
+    _isExpanded = (PageStorage.of(context)?.readState(context) ??
+        widget.initiallyExpanded) as bool;
     if (_isExpanded) _controller.value = 1.0;
   }
 
@@ -127,12 +125,10 @@ class _CustomExpansionTileState extends State<CustomExpansionTile>
       }
       PageStorage.of(context)?.writeState(context, _isExpanded);
     });
-    if (widget.onExpansionChanged != null) {
-      widget.onExpansionChanged(_isExpanded);
-    }
+    widget.onExpansionChanged?.call(_isExpanded);
   }
 
-  Widget _buildChildren(BuildContext context, Widget child) {
+  Widget _buildChildren(BuildContext context, Widget? child) {
     final borderSideColor = _borderColor.value ?? Colors.transparent;
 
     return Container(
@@ -175,13 +171,13 @@ class _CustomExpansionTileState extends State<CustomExpansionTile>
   @override
   void didChangeDependencies() {
     final theme = Theme.of(context);
-    _borderColorTween..end = theme.dividerColor;
+    _borderColorTween..end = theme?.dividerColor;
     _headerColorTween
-      ..begin = theme.textTheme.subtitle1.color
-      ..end = widget.openColor ?? theme.textTheme.subtitle1.color;
+      ..begin = theme?.textTheme.subtitle1?.color
+      ..end = widget.openColor ?? theme?.textTheme.subtitle1?.color;
     _iconColorTween
-      ..begin = theme.unselectedWidgetColor
-      ..end = widget.openColor ?? theme.unselectedWidgetColor;
+      ..begin = theme?.unselectedWidgetColor
+      ..end = widget.openColor ?? theme?.unselectedWidgetColor;
     _backgroundColorTween..end = widget.backgroundColor;
     super.didChangeDependencies();
   }
