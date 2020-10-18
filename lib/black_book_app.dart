@@ -1,3 +1,4 @@
+import 'package:black_book/screen/practical/signature_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -60,6 +61,7 @@ class _AppViewState extends State<AppView> {
         '/checklist': (var context) => ChecklistScreen(),
         '/checklist/category': (var context) => ChecklistCategoryScreen(),
         '/practical': (var context) => PracticalScreen(),
+        '/practical/signature': (var context) => SignatureScreen(),
         '/appendix': (var context) => AppendixScreen(),
         '/appendix/addresses': (var context) => AddressesScreen(),
         '/appendix/biodata': (var context) => BioDataScreen(),
