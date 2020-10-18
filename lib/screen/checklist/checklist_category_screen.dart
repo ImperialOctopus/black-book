@@ -13,12 +13,6 @@ class ChecklistCategoryScreen extends StatelessWidget {
 
     final category = CategoryData.categoryList[categoryIndex];
 
-    if (category == null) {
-      return Scaffold(
-        body: Center(child: Text('Error: Invalid category')),
-      );
-    }
-
     return Scaffold(
       appBar: AppBar(
         title: Text(category.name),
