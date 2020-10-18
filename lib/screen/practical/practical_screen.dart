@@ -9,7 +9,11 @@ class PracticalScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            OutlinedButton(),
+            OutlinedButton(
+              child: Text('Open'),
+              onPressed: () =>
+                  Navigator.of(context).pushNamed('/practical/signature'),
+            ),
           ],
         ));
   }
