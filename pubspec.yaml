@@ -2,6 +2,9 @@ name: black_book
 description: A new Flutter project.
 version: 2.0.0+3
 
+environment:
+  sdk: ">=2.11.0-213.0.dev <3.0.0"
+
 dependencies:
   flutter:
     sdk: flutter
