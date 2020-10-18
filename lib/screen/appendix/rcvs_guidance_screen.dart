@@ -24,7 +24,7 @@ class RcvsGuidanceScreen extends StatelessWidget {
             ),
             RichText(
               text: TextSpan(
-                style: Theme.of(context).textTheme.bodyText2,
+                style: Theme.of(context)?.textTheme.bodyText2,
                 children: <TextSpan>[
                   TextSpan(
                     text: '(b) carry out tests upon animals under the ',
@@ -41,7 +41,7 @@ class RcvsGuidanceScreen extends StatelessWidget {
             ),
             RichText(
               text: TextSpan(
-                style: Theme.of(context).textTheme.bodyText2,
+                style: Theme.of(context)?.textTheme.bodyText2,
                 children: <TextSpan>[
                   TextSpan(
                     text:
@@ -59,7 +59,7 @@ class RcvsGuidanceScreen extends StatelessWidget {
             ),
             RichText(
               text: TextSpan(
-                style: Theme.of(context).textTheme.bodyText2,
+                style: Theme.of(context)?.textTheme.bodyText2,
                 children: <TextSpan>[
                   TextSpan(
                     text:
@@ -80,7 +80,7 @@ class RcvsGuidanceScreen extends StatelessWidget {
             ),
             RichText(
               text: TextSpan(
-                style: Theme.of(context).textTheme.bodyText2,
+                style: Theme.of(context)?.textTheme.bodyText2,
                 children: <TextSpan>[
                   TextSpan(
                     text: 'Note the ',
@@ -98,7 +98,7 @@ class RcvsGuidanceScreen extends StatelessWidget {
             ),
             RichText(
               text: TextSpan(
-                style: Theme.of(context).textTheme.bodyText2,
+                style: Theme.of(context)?.textTheme.bodyText2,
                 children: <TextSpan>[
                   TextSpan(
                     text: '• ',
@@ -116,7 +116,7 @@ class RcvsGuidanceScreen extends StatelessWidget {
             ),
             RichText(
               text: TextSpan(
-                style: Theme.of(context).textTheme.bodyText2,
+                style: Theme.of(context)?.textTheme.bodyText2,
                 children: <TextSpan>[
                   TextSpan(
                     text: '• ',
@@ -134,7 +134,7 @@ class RcvsGuidanceScreen extends StatelessWidget {
             ),
             RichText(
               text: TextSpan(
-                style: Theme.of(context).textTheme.bodyText2,
+                style: Theme.of(context)?.textTheme.bodyText2,
                 children: <TextSpan>[
                   TextSpan(
                     text: '• ',

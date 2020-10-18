@@ -10,8 +10,8 @@ class BioDataScreen extends StatefulWidget {
 class _BioDataScreenState extends State<BioDataScreen> {
   @override
   Widget build(BuildContext context) {
-    final shortestSide = MediaQuery.of(context).size.shortestSide;
-    final useMobileLayout = shortestSide < 600;
+    final shortestSide = MediaQuery.of(context)?.size.shortestSide;
+    final useMobileLayout = (shortestSide ?? 0) < 600;
 
     return Scaffold(
       appBar: AppBar(

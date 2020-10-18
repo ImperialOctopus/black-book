@@ -12,7 +12,7 @@ class LabNormalScreen extends StatefulWidget {
 }
 
 class _LabNormalScreenState extends State<LabNormalScreen> {
-  LabReferenceSet _currentSet;
+  LabReferenceSet? _currentSet;
 
   @override
   void initState() {
@@ -81,8 +81,8 @@ class _LabNormalScreenState extends State<LabNormalScreen> {
     );
   }
 
-  List<ListTile> _buildList(LabReferenceSet referenceSet) {
-    return referenceSet.list.map(_buildRow).toList();
+  List<ListTile> _buildList(LabReferenceSet? referenceSet) {
+    return referenceSet?.list.map(_buildRow).toList() ?? [];
   }
 
   ListTile _buildRow(LabReference reference) {

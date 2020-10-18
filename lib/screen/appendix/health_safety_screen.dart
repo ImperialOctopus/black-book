@@ -12,7 +12,7 @@ class HealthSafetyScreen extends StatelessWidget {
         title: Text('Health & Safety'),
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(24),
+        padding: const EdgeInsets.all(24),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
@@ -63,7 +63,7 @@ class HealthSafetyScreen extends StatelessWidget {
             ),
             RichText(
               text: TextSpan(
-                style: Theme.of(context).textTheme.bodyText2,
+                style: Theme.of(context)?.textTheme.bodyText2,
                 children: <TextSpan>[
                   TextSpan(
                     text:
@@ -84,7 +84,7 @@ class HealthSafetyScreen extends StatelessWidget {
             ),
             RichText(
               text: TextSpan(
-                style: Theme.of(context).textTheme.bodyText2,
+                style: Theme.of(context)?.textTheme.bodyText2,
                 children: <TextSpan>[
                   TextSpan(
                     text:
