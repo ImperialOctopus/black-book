@@ -1,4 +1,3 @@
-import 'package:black_book/screen/practical/signature_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -15,6 +14,7 @@ import 'screen/checklist/checklist_category_screen.dart';
 import 'screen/checklist/checklist_screen.dart';
 import 'screen/home/home_screen.dart';
 import 'screen/practical/practical_screen.dart';
+import 'screen/practical/signature_screen.dart';
 import 'service/model_service.dart';
 import 'theme/style.dart';
 
