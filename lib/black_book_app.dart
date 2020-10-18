@@ -14,6 +14,7 @@ import 'screen/checklist/checklist_category_screen.dart';
 import 'screen/checklist/checklist_screen.dart';
 import 'screen/home/home_screen.dart';
 import 'screen/practical/practical_screen.dart';
+import 'screen/practical/signature_screen.dart';
 import 'service/model_service.dart';
 import 'theme/style.dart';
 
@@ -60,6 +61,7 @@ class _AppViewState extends State<AppView> {
         '/checklist': (var context) => ChecklistScreen(),
         '/checklist/category': (var context) => ChecklistCategoryScreen(),
         '/practical': (var context) => PracticalScreen(),
+        '/practical/signature': (var context) => SignatureScreen(),
         '/appendix': (var context) => AppendixScreen(),
         '/appendix/addresses': (var context) => AddressesScreen(),
         '/appendix/biodata': (var context) => BioDataScreen(),
