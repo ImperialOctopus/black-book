@@ -30,6 +30,5 @@ class SignaturePainter extends CustomPainter {
   //Called when CustomPainter is rebuilt.
   //Returning true because we want canvas to be rebuilt to reflect new changes.
   @override
-  bool shouldRepaint(SignaturePainter oldDelegate) =>
-      points != oldDelegate.points;
+  bool shouldRepaint(SignaturePainter oldDelegate) => true;
 }
