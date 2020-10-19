@@ -19,7 +19,6 @@ class _SignatureCanvasState extends State<SignatureCanvas> {
   Widget build(BuildContext context) {
     return GestureDetector(
       child: CustomPaint(
-        size: Size.infinite,
         painter: SignaturePainter(points: points, lineStyle: lineStyle),
       ),
       onPanStart: (details) {
