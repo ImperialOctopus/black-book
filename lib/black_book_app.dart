@@ -1,4 +1,3 @@
-import 'package:black_book/service/checklist_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -16,12 +15,16 @@ import 'screen/checklist/checklist_screen.dart';
 import 'screen/home/home_screen.dart';
 import 'screen/practical/practical_screen.dart';
 import 'screen/practical/signature_screen.dart';
+import 'service/checklist_service.dart';
+import 'service/signature_service.dart';
 import 'theme/style.dart';
 
 class BlackBookApp extends StatelessWidget {
   final ChecklistService checklistService;
+  final SignatureService signatureService;
 
-  const BlackBookApp({@required this.checklistService});
+  const BlackBookApp(
+      {@required this.checklistService, @required this.signatureService});
 
   @override
   Widget build(BuildContext context) {
@@ -29,6 +32,9 @@ class BlackBookApp extends StatelessWidget {
         providers: [
           RepositoryProvider<ChecklistService>.value(
             value: checklistService,
+          ),
+          RepositoryProvider<SignatureService>.value(
+            value: signatureService,
           )
         ],
         child: MultiBlocProvider(

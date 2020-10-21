@@ -1,6 +1,6 @@
-import '../model/signature/stroke.dart';
 import 'package:hive/hive.dart';
 
+import '../model/signature/stroke.dart';
 import 'model_service.dart';
 
 class SignatureService implements ModelService<List<Stroke>> {
@@ -17,8 +17,12 @@ class SignatureService implements ModelService<List<Stroke>> {
     final dynamic list = box.get(reference);
 
     try {
-      return (list as List).map((dynamic e) => Stroke.fromMap(e as Map<String, dynamic>)).toList();
-    } catch {
+      return (list as List)
+          .map((dynamic e) => Stroke.fromMap(e as Map<String, dynamic>))
+          .toList();
+      // Regardless of the error here we need to return an empty stroke list.
+      // ignore: avoid_catches_without_on_clauses
+    } catch (e) {
       return <Stroke>[];
     }
   }
