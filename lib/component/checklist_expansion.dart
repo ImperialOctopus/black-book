@@ -2,10 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../data/progress_icons.dart';
-import '../model/category.dart';
-import '../model/item.dart';
-import '../model/model.dart';
-import '../model/subcategory.dart';
+import '../model/checklist/category.dart';
+import '../model/checklist/item.dart';
+import '../model/checklist/model.dart';
+import '../model/checklist/subcategory.dart';
 import 'custom_expansion_tile.dart';
 
 class ChecklistExpansion extends StatefulWidget {

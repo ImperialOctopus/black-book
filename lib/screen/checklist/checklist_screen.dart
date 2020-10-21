@@ -3,14 +3,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../bloc/category/category_cubit.dart';
 import '../../data/category_data.dart';
-import '../../model/category.dart';
-import '../../model/model.dart';
+import '../../model/checklist/category.dart';
 
 class ChecklistScreen extends StatelessWidget {
-  final Model model;
   final List<Category> categories = CategoryData.categoryList;
 
-  ChecklistScreen({this.model});
+  ChecklistScreen();
 
   @override
   Widget build(BuildContext context) {

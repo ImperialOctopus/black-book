@@ -1,4 +1,4 @@
-import '../model/category.dart';
+import '../model/checklist/category.dart';
 import 'category_data_cat.dart';
 import 'category_data_cattle.dart';
 import 'category_data_dog.dart';

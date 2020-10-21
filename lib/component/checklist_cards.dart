@@ -1,11 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../data/progress_icons.dart';
-import '../model/category.dart';
-import '../model/item.dart';
-import '../model/subcategory.dart';
+import '../model/checklist/category.dart';
+import '../model/checklist/item.dart';
+import '../model/checklist/subcategory.dart';
 import '../service/model_service.dart';
 
 class ChecklistCards extends StatefulWidget {
