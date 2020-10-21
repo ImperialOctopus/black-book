@@ -1,4 +1,4 @@
-import 'package:black_book/model/checklist/signature/stroke.dart';
+import '../model/signature/stroke.dart';
 import 'package:hive/hive.dart';
 
 import 'model_service.dart';

@@ -1,3 +1,4 @@
+import 'package:black_book/service/checklist_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -42,7 +43,7 @@ class _ChecklistCardsState extends State<ChecklistCards> {
   }
 
   Widget buildListItem(Item item) {
-    final _modelService = RepositoryProvider.of<ModelService>(context);
+    final _modelService = RepositoryProvider.of<ChecklistService>(context);
     final _progress = _modelService.get(item.reference);
 
     return ListTile(
