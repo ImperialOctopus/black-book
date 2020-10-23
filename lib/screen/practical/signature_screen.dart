@@ -23,7 +23,7 @@ class SignatureScreen extends StatelessWidget {
                     reference: 'test',
                     signatureService:
                         RepositoryProvider.of<SignatureService>(context)),
-                child: SignatureCanvas(),
+                child: SignatureCanvas(reference: 'test'),
               )),
         ),
       ),
