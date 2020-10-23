@@ -9,7 +9,8 @@ class SignatureService implements ModelService<List<Stroke>> {
   SignatureService._(this.box);
 
   static Future<SignatureService> open(String name) async {
-    return SignatureService._(await Hive.openBox<List<int>>(name));
+    return SignatureService._(
+        await Hive.openBox<List<Map<String, dynamic>>>(name));
   }
 
   List<Stroke> get(String reference) {
@@ -28,6 +29,7 @@ class SignatureService implements ModelService<List<Stroke>> {
   }
 
   Future<void> put(String reference, List<Stroke> progress) async {
-    await box.put(reference, progress);
+    await box.put(
+        reference, progress.map<Map<String, dynamic>>((e) => e.asMap).toList());
   }
 }

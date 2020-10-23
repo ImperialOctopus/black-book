@@ -24,37 +24,36 @@ class _SignatureCanvasState extends State<SignatureCanvas> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<SignatureBloc, List<Stroke>>(
-      builder: (context, strokes) => GestureDetector(
-        child: CustomPaint(
+    return GestureDetector(
+      child: BlocBuilder<SignatureBloc, List<Stroke>>(
+        builder: (context, strokes) => CustomPaint(
           painter: SignaturePainter(strokes: [
             ...strokes,
             Stroke(locations: points, strokeWidth: strokeWidth, color: color)
           ]),
         ),
-        onPanStart: (details) {
-          setState(() {
-            final renderBox = context.findRenderObject() as RenderBox;
-            points.add(renderBox.globalToLocal(details.globalPosition));
-          });
-        },
-        onPanUpdate: (details) {
-          setState(() {
-            final renderBox = context.findRenderObject() as RenderBox;
-            points.add(renderBox.globalToLocal(details.globalPosition));
-          });
-        },
-        onPanEnd: (details) {
-          setState(() {
-            BlocProvider.of<SignatureBloc>(context).add(SignatureEventAdd(
-                Stroke(
-                    locations: points,
-                    strokeWidth: strokeWidth,
-                    color: color)));
-            points.clear();
-          });
-        },
       ),
+      onPanStart: (details) {
+        setState(() {
+          final renderBox = context.findRenderObject() as RenderBox;
+          points.add(renderBox.globalToLocal(details.globalPosition));
+        });
+      },
+      onPanUpdate: (details) {
+        setState(() {
+          final renderBox = context.findRenderObject() as RenderBox;
+          points.add(renderBox.globalToLocal(details.globalPosition));
+        });
+      },
+      onPanEnd: (details) {
+        setState(() {
+          BlocProvider.of<SignatureBloc>(context).add(SignatureEventAdd(Stroke(
+              locations: points.toList(),
+              strokeWidth: strokeWidth,
+              color: color)));
+          points.clear();
+        });
+      },
     );
   }
 }

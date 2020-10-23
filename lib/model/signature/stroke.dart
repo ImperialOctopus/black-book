@@ -18,7 +18,7 @@ class Stroke {
         color = Color(map['color'] as int);
 
   Map<String, dynamic> get asMap => <String, dynamic>{
-        'locations': locations.map((e) => [e.dx, e.dy]),
+        'locations': locations.map((e) => [e.dx, e.dy]).toList(),
         'strokeWidth': strokeWidth,
         'color': color.value,
       };
