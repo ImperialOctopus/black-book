@@ -1,12 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../data/progress_icons.dart';
-import '../model/category.dart';
-import '../model/item.dart';
-import '../model/subcategory.dart';
-import '../service/model_service.dart';
+import '../model/checklist/category.dart';
+import '../model/checklist/item.dart';
+import '../model/checklist/subcategory.dart';
+import '../service/checklist_service.dart';
 
 class ChecklistCards extends StatefulWidget {
   final Category category;
@@ -43,7 +42,7 @@ class _ChecklistCardsState extends State<ChecklistCards> {
   }
 
   Widget buildListItem(Item item) {
-    final _modelService = RepositoryProvider.of<ModelService>(context);
+    final _modelService = RepositoryProvider.of<ChecklistService>(context);
     final _progress = _modelService.get(item.reference);
 
     return ListTile(

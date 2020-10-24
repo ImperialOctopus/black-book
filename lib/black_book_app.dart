@@ -15,20 +15,26 @@ import 'screen/checklist/checklist_screen.dart';
 import 'screen/home/home_screen.dart';
 import 'screen/practical/practical_screen.dart';
 import 'screen/practical/signature_screen.dart';
-import 'service/model_service.dart';
+import 'service/checklist_service.dart';
+import 'service/signature_service.dart';
 import 'theme/style.dart';
 
 class BlackBookApp extends StatelessWidget {
-  final ModelService modelService;
+  final ChecklistService checklistService;
+  final SignatureService signatureService;
 
-  const BlackBookApp({@required this.modelService});
+  const BlackBookApp(
+      {@required this.checklistService, @required this.signatureService});
 
   @override
   Widget build(BuildContext context) {
     return MultiRepositoryProvider(
         providers: [
-          RepositoryProvider<ModelService>.value(
-            value: modelService,
+          RepositoryProvider<ChecklistService>.value(
+            value: checklistService,
+          ),
+          RepositoryProvider<SignatureService>.value(
+            value: signatureService,
           )
         ],
         child: MultiBlocProvider(

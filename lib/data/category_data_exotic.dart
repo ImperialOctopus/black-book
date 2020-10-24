@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
-import '../model/category.dart';
-import '../model/item.dart';
-import '../model/subcategory.dart';
+import '../model/checklist/category.dart';
+import '../model/checklist/item.dart';
+import '../model/checklist/subcategory.dart';
 
 class CategoryDataExotic {
   static const Category data = Category(

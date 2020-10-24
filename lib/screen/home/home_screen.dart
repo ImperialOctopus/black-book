@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../model/model.dart';
 import 'menu_item.dart';
 
 class HomeScreen extends StatelessWidget {
-  final Model model;
-
-  HomeScreen({Key key, this.model}) : super(key: key);
+  HomeScreen();
 
   @override
   Widget build(BuildContext context) {
