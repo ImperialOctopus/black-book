@@ -13,18 +13,19 @@ class SignaturePainter extends CustomPainter {
   //This is where we can draw on canvas.
   @override
   void paint(Canvas canvas, Size size) {
+    canvas.clipRect(
+        Rect.fromPoints(Offset.zero, Offset(size.width, size.height)));
     for (var stroke in strokes) {
-      if (stroke.locations.isNotEmpty) {
+      if (stroke.points.isNotEmpty) {
         final path = Path()
-          ..moveTo(stroke.locations.first.dx, stroke.locations.first.dy);
-        stroke.locations
-            .skip(1)
-            .forEach((point) => path.lineTo(point.dx, point.dy));
+          ..moveTo(stroke.points.first.x, stroke.points.first.y);
+        stroke.points.skip(1).forEach((point) => path.lineTo(point.x, point.y));
         canvas.drawPath(
             path,
             Paint()
               ..color = stroke.color
-              ..strokeWidth = stroke.strokeWidth);
+              ..strokeWidth = stroke.strokeWidth
+              ..style = PaintingStyle.stroke);
       }
     }
   }

@@ -8,7 +8,7 @@ class ChecklistService implements ModelService<List<int>> {
   ChecklistService._(this.box);
 
   static Future<ChecklistService> open(String name) async {
-    return ChecklistService._(await Hive.openBox<List<int>>(name));
+    return ChecklistService._(await Hive.openBox<List<dynamic>>(name));
   }
 
   List<int> get(String reference) {
