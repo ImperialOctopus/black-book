@@ -1,25 +1,21 @@
-import 'package:flutter/material.dart';
+import 'dart:math';
 
+import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
+
+part 'stroke.g.dart';
+
+@HiveType(typeId: 0)
 class Stroke {
-  final List<Offset> locations;
+  @HiveField(0)
+  final List<Point<double>> points;
+  @HiveField(1)
   final double strokeWidth;
+  @HiveField(2)
   final Color color;
 
-  Stroke(
-      {@required this.locations,
+  const Stroke(
+      {@required this.points,
       @required this.strokeWidth,
       @required this.color});
-
-  Stroke.fromMap(Map<String, dynamic> map)
-      : locations = (map['locations'] as List<List<double>>)
-            .map((e) => Offset(e[0], e[1]))
-            .toList(),
-        strokeWidth = map['strokeWidth'] as double,
-        color = Color(map['color'] as int);
-
-  Map<String, dynamic> get asMap => <String, dynamic>{
-        'locations': locations.map((e) => [e.dx, e.dy]).toList(),
-        'strokeWidth': strokeWidth,
-        'color': color.value,
-      };
 }
