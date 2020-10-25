@@ -14,8 +14,11 @@ import 'screen/appendix/rcvs_guidance_screen.dart';
 import 'screen/checklist/checklist_category_screen.dart';
 import 'screen/checklist/checklist_screen.dart';
 import 'screen/home/home_screen.dart';
-import 'screen/signature/signature_list_screen.dart';
+import 'screen/signature/signature_list_five_screen.dart';
+import 'screen/signature/signature_list_four_screen.dart';
+import 'screen/signature/signature_list_six_screen.dart';
 import 'screen/signature/signature_screen.dart';
+import 'screen/signature/signature_year_screen.dart';
 import 'service/checklist_service.dart';
 import 'service/signature_service.dart';
 import 'theme/style.dart';
@@ -70,7 +73,10 @@ class _AppViewState extends State<AppView> {
       routes: <String, WidgetBuilder>{
         '/checklist': (var context) => ChecklistScreen(),
         '/checklist/category': (var context) => const ChecklistCategoryScreen(),
-        '/practical': (var context) => PracticalScreen(),
+        '/practical': (var context) => SignatureYearScreen(),
+        '/practical/four': (var context) => SignatureListFour(),
+        '/practical/five': (var context) => SignatureListFive(),
+        '/practical/six': (var context) => SignatureListSix(),
         '/practical/signature': (var context) => SignatureScreen(),
         '/appendix': (var context) => AppendixScreen(),
         '/appendix/addresses': (var context) => const AddressesScreen(),
