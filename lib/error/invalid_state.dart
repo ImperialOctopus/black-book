@@ -5,7 +5,7 @@ class InvalidStateComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Center(child: Text('Invalid state. Please restart.')),
+      body: const Center(child: Text('Invalid state. Please restart.')),
     );
   }
 }

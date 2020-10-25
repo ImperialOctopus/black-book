@@ -17,7 +17,7 @@ class SignatureService implements ModelService<List<Stroke>> {
     // Get data from storage.
 
     try {
-      final list = box.get(reference, defaultValue: Signature([]));
+      final list = box.get(reference, defaultValue: const Signature([]));
       return list.strokes;
       // Regardless of the error here we need to return an empty stroke list.
       // ignore: avoid_catches_without_on_clauses

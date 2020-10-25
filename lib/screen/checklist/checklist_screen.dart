@@ -14,7 +14,7 @@ class ChecklistScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Clinical Checklist'),
+        title: const Text('Clinical Checklist'),
       ),
       body: ListView.separated(
         itemCount: categories.length,
@@ -22,13 +22,13 @@ class ChecklistScreen extends StatelessWidget {
           return ListTile(
               title: Text(categories[index].name),
               leading: categories[index].icon,
-              trailing: Icon(Icons.keyboard_arrow_right),
+              trailing: const Icon(Icons.keyboard_arrow_right),
               onTap: () {
                 BlocProvider.of<CategoryCubit>(context).setIndex(index);
                 Navigator.of(context).pushNamed('/checklist/category');
               });
         },
-        separatorBuilder: (context, index) => Divider(),
+        separatorBuilder: (context, index) => const Divider(),
       ),
     );
   }

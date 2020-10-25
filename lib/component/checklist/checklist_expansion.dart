@@ -51,7 +51,9 @@ class _ChecklistExpansionState extends State<ChecklistExpansion> {
     return ListTile(
       title: Text(
         item.name,
-        style: item.essential ? TextStyle(fontStyle: FontStyle.italic) : null,
+        style: item.essential
+            ? const TextStyle(fontStyle: FontStyle.italic)
+            : null,
       ),
       trailing: Row(
         mainAxisSize: MainAxisSize.min,

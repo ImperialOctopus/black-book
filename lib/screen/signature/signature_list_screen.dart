@@ -4,33 +4,24 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 
 import '../../bloc/signature_select/signature_select_cubit.dart';
 import '../../component/signature/list_card.dart';
+import '../../component/signature/static_signature_container.dart';
 
 class PracticalScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Practical Sign-Off')),
+      appBar: AppBar(title: const Text('Practical Sign-Off')),
       body: ListView(
         children: [
           ListCard(
             children: [
-              ListTile(
+              const ListTile(
                 leading: Icon(MdiIcons.rabbit),
                 title: Text('Fourth Year - Small Animal Clinical Studies'),
               ),
               ListTile(
-                title: Text('Session 1'),
-                trailing: Container(
-                  height: 100,
-                  width: 200,
-                  decoration: BoxDecoration(
-                      border: Border(
-                          left: BorderSide(
-                              width: 2.0, color: Colors.lightBlue[100]))),
-                  child: FittedBox(
-                    fit: BoxFit.contain,
-                  ),
-                ),
+                title: const Text('Session 1'),
+                trailing: const StaticSignatureContainer(child: null),
                 onTap: () => openSignaturePage(context, '4_clinical_small'),
               ),
             ],
