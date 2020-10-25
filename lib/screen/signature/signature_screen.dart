@@ -41,20 +41,29 @@ class SignatureScreen extends StatelessWidget {
                 Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    OutlinedButton(
-                      child: const Text('Undo'),
-                      onPressed: () {
-                        BlocProvider.of<SignatureBloc>(context)
-                            .add(SignatureEventUndo());
-                      },
+                    Container(
+                      width: 100,
+                      height: 50,
+                      child: OutlinedButton(
+                        child: const Text('Undo'),
+                        onPressed: () {
+                          BlocProvider.of<SignatureBloc>(context)
+                              .add(SignatureEventUndo());
+                        },
+                      ),
                     ),
-                    OutlinedButton(
-                      child: const Text('Clear'),
-                      onPressed: () {
-                        BlocProvider.of<SignatureBloc>(context)
-                            .add(SignatureEventClear());
-                      },
-                    )
+                    Container(width: 20),
+                    Container(
+                      width: 100,
+                      height: 50,
+                      child: OutlinedButton(
+                        child: const Text('Clear'),
+                        onPressed: () {
+                          BlocProvider.of<SignatureBloc>(context)
+                              .add(SignatureEventClear());
+                        },
+                      ),
+                    ),
                   ],
                 )
               ],
