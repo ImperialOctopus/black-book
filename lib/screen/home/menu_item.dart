@@ -25,7 +25,7 @@ class MenuItem extends StatelessWidget {
               child: Container(
                 color: Theme.of(context).primaryColor.withAlpha(labelAlpha),
                 child: Padding(
-                  padding: EdgeInsets.only(right: 4),
+                  padding: const EdgeInsets.only(right: 4),
                   child: Text(
                     name,
                     textAlign: TextAlign.end,

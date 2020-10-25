@@ -9,13 +9,13 @@ class AddressesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Useful Addresses'),
+        title: const Text('Useful Addresses'),
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(24),
+        padding: const EdgeInsets.all(24),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
+          children: const <Widget>[
             Text(
               'Department of Veterinary Medicine',
               style: TextStyle(fontWeight: FontWeight.bold),

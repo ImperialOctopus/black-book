@@ -13,7 +13,7 @@ class BodyWeightScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Body Weight Ratios'),
-          bottom: TabBar(
+          bottom: const TabBar(
             tabs: <Tab>[
               Tab(
                 text: 'Dog',
@@ -35,7 +35,7 @@ class BodyWeightScreen extends StatelessWidget {
                   pinned: true,
                   title: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: <Widget>[
+                    children: const <Widget>[
                       Text(
                         'Body Mass (Kg)',
                         style: TextStyle(fontSize: 14),
@@ -64,7 +64,7 @@ class BodyWeightScreen extends StatelessWidget {
                   pinned: true,
                   title: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: <Widget>[
+                    children: const <Widget>[
                       Text(
                         'Body Mass (Kg)',
                         style: TextStyle(fontSize: 14),

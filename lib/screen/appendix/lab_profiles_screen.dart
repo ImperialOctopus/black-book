@@ -21,7 +21,7 @@ class LabProfilesScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Laboratory Samples & Profiles'),
-          bottom: TabBar(
+          bottom: const TabBar(
             tabs: <Tab>[
               Tab(
                 text: 'Small',
@@ -46,7 +46,7 @@ class LabProfilesScreen extends StatelessWidget {
           children: <Widget>[
             SingleChildScrollView(
               child: Padding(
-                padding: EdgeInsets.all(24),
+                padding: const EdgeInsets.all(24),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: const <Widget>[
@@ -190,7 +190,7 @@ class LabProfilesScreen extends StatelessWidget {
             ),
             SingleChildScrollView(
               child: Padding(
-                padding: EdgeInsets.all(24),
+                padding: const EdgeInsets.all(24),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: const <Widget>[
@@ -296,7 +296,7 @@ class LabProfilesScreen extends StatelessWidget {
             ),
             SingleChildScrollView(
               child: Padding(
-                padding: EdgeInsets.all(24),
+                padding: const EdgeInsets.all(24),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: const <Widget>[
@@ -440,7 +440,7 @@ class LabProfilesScreen extends StatelessWidget {
             ),
             SingleChildScrollView(
               child: Padding(
-                padding: EdgeInsets.all(24),
+                padding: const EdgeInsets.all(24),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: const <Widget>[

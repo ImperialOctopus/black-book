@@ -33,7 +33,7 @@ class BioData {
   });
 }
 
-final List<BioData> bioData = <BioData>[
+final List<BioData> bioData = const <BioData>[
   BioData(
     species: 'Horse',
     tempString: '37.1-38.0 (37.6)',

@@ -9,23 +9,23 @@ class RcvsGuidanceScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('RCVS EMS Guidance'),
+        title: const Text('RCVS EMS Guidance'),
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(24),
+        padding: const EdgeInsets.all(24),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Text(
+            const Text(
               'Under current Regulations (Veterinary Surgeons Act 1966 and the Amendments of 1981 and 1993), you are entitled, as a veterinary student embarking upon your clinical studies, to perform the following:',
             ),
-            Text(
+            const Text(
               '(a) examine animals;',
             ),
             RichText(
               text: TextSpan(
                 style: Theme.of(context).textTheme.bodyText2,
-                children: <TextSpan>[
+                children: const <TextSpan>[
                   TextSpan(
                     text: '(b) carry out tests upon animals under the ',
                   ),
@@ -42,7 +42,7 @@ class RcvsGuidanceScreen extends StatelessWidget {
             RichText(
               text: TextSpan(
                 style: Theme.of(context).textTheme.bodyText2,
-                children: <TextSpan>[
+                children: const <TextSpan>[
                   TextSpan(
                     text:
                         '(c) administer treatment (other than by way of surgical operations) to animals under the ',
@@ -60,7 +60,7 @@ class RcvsGuidanceScreen extends StatelessWidget {
             RichText(
               text: TextSpan(
                 style: Theme.of(context).textTheme.bodyText2,
-                children: <TextSpan>[
+                children: const <TextSpan>[
                   TextSpan(
                     text:
                         '(d) perform surgical operations upon animals in accordance with the directions and under the ',
@@ -75,13 +75,13 @@ class RcvsGuidanceScreen extends StatelessWidget {
                 ],
               ),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.all(8),
             ),
             RichText(
               text: TextSpan(
                 style: Theme.of(context).textTheme.bodyText2,
-                children: <TextSpan>[
+                children: const <TextSpan>[
                   TextSpan(
                     text: 'Note the ',
                   ),
@@ -99,7 +99,7 @@ class RcvsGuidanceScreen extends StatelessWidget {
             RichText(
               text: TextSpan(
                 style: Theme.of(context).textTheme.bodyText2,
-                children: <TextSpan>[
+                children: const <TextSpan>[
                   TextSpan(
                     text: '• ',
                   ),
@@ -117,7 +117,7 @@ class RcvsGuidanceScreen extends StatelessWidget {
             RichText(
               text: TextSpan(
                 style: Theme.of(context).textTheme.bodyText2,
-                children: <TextSpan>[
+                children: const <TextSpan>[
                   TextSpan(
                     text: '• ',
                   ),
@@ -135,7 +135,7 @@ class RcvsGuidanceScreen extends StatelessWidget {
             RichText(
               text: TextSpan(
                 style: Theme.of(context).textTheme.bodyText2,
-                children: <TextSpan>[
+                children: const <TextSpan>[
                   TextSpan(
                     text: '• ',
                   ),
@@ -150,10 +150,10 @@ class RcvsGuidanceScreen extends StatelessWidget {
                 ],
               ),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.all(8),
             ),
-            Text(
+            const Text(
               'Students must always ensure that they are acting under guidance',
               style: TextStyle(
                 fontWeight: FontWeight.bold,

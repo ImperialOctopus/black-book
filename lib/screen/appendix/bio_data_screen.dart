@@ -15,7 +15,7 @@ class _BioDataScreenState extends State<BioDataScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Biological Data'),
+        title: const Text('Biological Data'),
       ),
       body: useMobileLayout ? _buildMobile() : _buildTablet(),
     );
@@ -58,24 +58,24 @@ class _BioDataScreenState extends State<BioDataScreen> {
   Widget _buildTablet() {
     return SingleChildScrollView(
       child: DataTable(
-        columns: <DataColumn>[
+        columns: const <DataColumn>[
           DataColumn(
-            label: const Text('Species'),
+            label: Text('Species'),
           ),
           DataColumn(
-            label: const Text('Temp (℃)'),
+            label: Text('Temp (℃)'),
           ),
           DataColumn(
-            label: const Text('Heart Rate (/min)'),
+            label: Text('Heart Rate (/min)'),
           ),
           DataColumn(
-            label: const Text('Respiration Rate (/min)'),
+            label: Text('Respiration Rate (/min)'),
           ),
           DataColumn(
-            label: const Text('Oestrus Cycle Length (days)'),
+            label: Text('Oestrus Cycle Length (days)'),
           ),
           DataColumn(
-            label: const Text('Gestation Period (days)'),
+            label: Text('Gestation Period (days)'),
           ),
         ],
         rows: List<DataRow>.generate(

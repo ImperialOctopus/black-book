@@ -34,19 +34,19 @@ class _LabNormalScreenState extends State<LabNormalScreen> {
             title: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Text(
+                const Text(
                   'Species:',
                   style: TextStyle(fontSize: 14),
                 ),
-                Padding(padding: EdgeInsets.all(8)),
+                const Padding(padding: EdgeInsets.all(8)),
                 DropdownButton<LabReferenceSet>(
                   value: _currentSet,
-                  style: TextStyle(color: Colors.white),
+                  style: const TextStyle(color: Colors.white),
                   selectedItemBuilder: (_) => List<Widget>.generate(
                     labReferences.length,
                     (index) => Text(
                       labReferences[index].name,
-                      style: TextStyle(color: Colors.white, height: 2.6),
+                      style: const TextStyle(color: Colors.white, height: 2.6),
                     ),
                   ),
                   items: List<DropdownMenuItem<LabReferenceSet>>.generate(
@@ -55,7 +55,7 @@ class _LabNormalScreenState extends State<LabNormalScreen> {
                       value: labReferences[index],
                       child: Text(
                         labReferences[index].name,
-                        style: TextStyle(color: Colors.black),
+                        style: const TextStyle(color: Colors.black),
                       ),
                     ),
                   ),

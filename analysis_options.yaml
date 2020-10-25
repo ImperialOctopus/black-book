@@ -14,6 +14,7 @@ linter:
   rules:
     file_names: false
     public_member_api_docs: false
+    prefer_const_constructors: true
 
 analyzer:
   #   exclude:
@@ -21,3 +22,4 @@ analyzer:
   strong-mode:
     implicit-casts: false
     implicit-dynamic: false
+#
