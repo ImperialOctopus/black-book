@@ -1,10 +1,7 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
+import 'package:hive/hive.dart';
 
-part of 'signature.dart';
-
-// **************************************************************************
-// TypeAdapterGenerator
-// **************************************************************************
+import 'signature.dart';
+import 'stroke.dart';
 
 class SignatureAdapter extends TypeAdapter<Signature> {
   @override
