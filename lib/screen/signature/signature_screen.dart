@@ -10,9 +10,6 @@ import '../../model/signature/stroke.dart';
 import '../../service/signature_service.dart';
 
 class SignatureScreen extends StatelessWidget {
-  static const double signatureWidth = 500;
-  static const double signatureHeight = 300;
-
   @override
   Widget build(BuildContext context) {
     if (BlocProvider.of<SignatureSelectCubit>(context).state == '') {
@@ -31,14 +28,10 @@ class SignatureScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(BlocProvider.of<SignatureBloc>(context).reference),
-                SizedBox(
-                  height: signatureHeight,
-                  width: signatureWidth,
-                  child: Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(color: Colors.blueAccent)),
-                    child: const SignatureCanvas(),
-                  ),
+                Container(
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Colors.blueAccent)),
+                  child: const SignatureCanvas(),
                 ),
                 Row(
                   mainAxisSize: MainAxisSize.min,

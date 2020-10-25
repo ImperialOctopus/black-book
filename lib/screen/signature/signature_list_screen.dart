@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
-import '../../bloc/signature_select/signature_select_cubit.dart';
 import '../../component/signature/list_card.dart';
-import '../../component/signature/static_signature_container.dart';
+import '../../component/signature/signature_list_item.dart';
 
 class PracticalScreen extends StatelessWidget {
   @override
@@ -12,28 +10,30 @@ class PracticalScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('Practical Sign-Off')),
       body: ListView(
-        children: [
+        children: const [
           ListCard(
             children: [
-              const ListTile(
+              ListTile(
                 leading: Icon(MdiIcons.rabbit),
                 title: Text('Fourth Year - Small Animal Clinical Studies'),
               ),
-              ListTile(
-                title: const Text('Session 1'),
-                trailing: const StaticSignatureContainer(child: null),
-                onTap: () => openSignaturePage(context, '4_clinical_small'),
+              Divider(),
+              SignatureListItem(
+                title: Text('Session 1'),
+                reference: '4_clinical_small_1',
+              ),
+              SignatureListItem(
+                title: Text('Session 2'),
+                reference: '4_clinical_small_2',
+              ),
+              SignatureListItem(
+                title: Text('Session 3'),
+                reference: '4_clinical_small_3',
               ),
             ],
           ),
         ],
       ),
     );
-  }
-
-  void openSignaturePage(BuildContext context, String reference) {
-    BlocProvider.of<SignatureSelectCubit>(context)
-        .setReference('4_clinical_small');
-    Navigator.of(context).pushNamed('/practical/signature');
   }
 }
