@@ -6,9 +6,9 @@ import '../../model/signature/stroke.dart';
 
 class SignaturePainter extends CustomPainter {
   //Keep track of the points tapped on the screen
-  List<Stroke> strokes = <Stroke>[];
+  final List<Stroke> strokes;
 
-  SignaturePainter({@required this.strokes});
+  const SignaturePainter({@required this.strokes});
 
   //This is where we can draw on canvas.
   @override

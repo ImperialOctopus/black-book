@@ -11,7 +11,7 @@ import '../signature/signature_painter.dart';
 
 /// Displays the signature from a provided SignatureBloc.
 class SignatureCanvas extends StatefulWidget {
-  SignatureCanvas();
+  const SignatureCanvas();
 
   @override
   _SignatureCanvasState createState() => _SignatureCanvasState();
