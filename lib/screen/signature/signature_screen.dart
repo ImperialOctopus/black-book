@@ -59,13 +59,33 @@ class SignatureScreen extends StatelessWidget {
                       child: OutlinedButton(
                         child: const Text('Clear'),
                         onPressed: () {
-                          BlocProvider.of<SignatureBloc>(context)
-                              .add(SignatureEventClear());
+                          showDialog<AlertDialog>(
+                            context: context,
+                            child: AlertDialog(
+                              title: const Text("Clear Signature"),
+                              content: const Text(
+                                  // ignore: lines_longer_than_80_chars
+                                  "Are you sure you want to clear this signature?"),
+                              actions: [
+                                FlatButton(
+                                  child: const Text("Cancel"),
+                                  onPressed: () => Navigator.of(context).pop(),
+                                ),
+                                FlatButton(
+                                    child: const Text("Clear Signature"),
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                      BlocProvider.of<SignatureBloc>(context)
+                                          .add(SignatureEventClear());
+                                    }),
+                              ],
+                            ),
+                          );
                         },
                       ),
                     ),
                   ],
-                )
+                ),
               ],
             ),
           ),
