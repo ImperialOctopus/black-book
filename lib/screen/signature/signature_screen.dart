@@ -27,11 +27,16 @@ class SignatureScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(BlocProvider.of<SignatureBloc>(context).reference),
-                Container(
-                  decoration: BoxDecoration(
-                      border: Border.all(color: Colors.blueAccent)),
-                  child: const SignatureCanvas(),
+                Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.blueAccent)),
+                      child: const SignatureCanvas(),
+                    ),
+                  ),
                 ),
                 Row(
                   mainAxisSize: MainAxisSize.min,
