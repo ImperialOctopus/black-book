@@ -1,3 +1,4 @@
+import 'package:black_book/error/invalid_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -14,9 +15,7 @@ class ChecklistCategoryScreen extends StatelessWidget {
     final category = CategoryData.categoryList[categoryIndex];
 
     if (category == null) {
-      return Scaffold(
-        body: Center(child: Text('Error: Invalid category')),
-      );
+      return InvalidStateComponent();
     }
 
     return Scaffold(

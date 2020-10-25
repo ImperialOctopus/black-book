@@ -26,7 +26,6 @@ class HomeScreen extends StatelessWidget {
                 ),
                 onTap: () => Navigator.of(context).pushNamed('/checklist'),
               ),
-              /*
               MenuItem(
                 name: 'Practical Sign-Off',
                 child: Image.asset(
@@ -35,7 +34,6 @@ class HomeScreen extends StatelessWidget {
                 ),
                 onTap: () => Navigator.of(context).pushNamed('/practical'),
               ),
-              */
               MenuItem(
                 name: 'Appendix',
                 child: Image.asset(
