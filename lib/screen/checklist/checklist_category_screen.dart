@@ -1,10 +1,10 @@
-import 'package:black_book/error/invalid_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../bloc/category/category_cubit.dart';
-import '../../component/checklist_cards.dart';
+import '../../component/checklist/checklist_cards.dart';
 import '../../data/category_data.dart';
+import '../../error/invalid_state.dart';
 
 class ChecklistCategoryScreen extends StatelessWidget {
   const ChecklistCategoryScreen();
