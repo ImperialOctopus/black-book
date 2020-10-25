@@ -8,7 +8,9 @@ import 'black_book_app.dart';
 import 'extension/color_type_adapter.dart';
 import 'extension/point_type_adapter.dart';
 import 'model/signature/signature.dart';
+import 'model/signature/signature_adapter.dart';
 import 'model/signature/stroke.dart';
+import 'model/signature/stroke_adapter.dart';
 import 'service/checklist_service.dart';
 import 'service/signature_service.dart';
 
