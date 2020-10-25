@@ -1,8 +1,8 @@
-import 'package:black_book/bloc/signature_select/signature_select_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'bloc/category/category_cubit.dart';
+import 'bloc/signature_select/signature_select_cubit.dart';
 import 'screen/appendix/addresses_screen.dart';
 import 'screen/appendix/appendix_screen.dart';
 import 'screen/appendix/bio_data_screen.dart';
@@ -14,8 +14,8 @@ import 'screen/appendix/rcvs_guidance_screen.dart';
 import 'screen/checklist/checklist_category_screen.dart';
 import 'screen/checklist/checklist_screen.dart';
 import 'screen/home/home_screen.dart';
-import 'screen/practical/practical_screen.dart';
-import 'screen/practical/signature_screen.dart';
+import 'screen/signature/signature_list_screen.dart';
+import 'screen/signature/signature_screen.dart';
 import 'service/checklist_service.dart';
 import 'service/signature_service.dart';
 import 'theme/style.dart';

@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-import '../model/signature/stroke.dart';
+import '../../model/signature/stroke.dart';
 
 class SignaturePainter extends CustomPainter {
   //Keep track of the points tapped on the screen

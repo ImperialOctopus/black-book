@@ -8,9 +8,6 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Black Book'),
-      ),
       body: Center(
         child: ConstrainedBox(
           constraints: BoxConstraints(maxWidth: 800),

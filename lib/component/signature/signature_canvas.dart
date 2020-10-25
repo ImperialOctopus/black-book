@@ -3,11 +3,11 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../bloc/signature/signature_bloc.dart';
-import '../bloc/signature/signature_event.dart';
-import '../extension/offset_to_point.dart';
-import '../model/signature/stroke.dart';
-import 'signature_painter.dart';
+import '../../bloc/signature/signature_bloc.dart';
+import '../../bloc/signature/signature_event.dart';
+import '../../extension/offset_to_point.dart';
+import '../../model/signature/stroke.dart';
+import '../signature/signature_painter.dart';
 
 /// Displays the signature from a provided SignatureBloc.
 class SignatureCanvas extends StatefulWidget {
