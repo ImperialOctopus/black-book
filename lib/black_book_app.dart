@@ -1,3 +1,4 @@
+import 'package:black_book/bloc/signature_select/signature_select_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -42,6 +43,9 @@ class BlackBookApp extends StatelessWidget {
             BlocProvider<CategoryCubit>(
               create: (context) => CategoryCubit(),
             ),
+            BlocProvider<SignatureSelectCubit>(
+              create: (context) => SignatureSelectCubit(),
+            )
           ],
           child: AppView(),
         ));
