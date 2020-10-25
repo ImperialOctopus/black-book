@@ -3,8 +3,6 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 
-part 'stroke.g.dart';
-
 @HiveType(typeId: 0)
 class Stroke {
   @HiveField(0)

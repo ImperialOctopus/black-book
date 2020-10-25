@@ -1,10 +1,9 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
+import 'dart:math';
 
-part of 'stroke.dart';
+import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
 
-// **************************************************************************
-// TypeAdapterGenerator
-// **************************************************************************
+import 'stroke.dart';
 
 class StrokeAdapter extends TypeAdapter<Stroke> {
   @override
