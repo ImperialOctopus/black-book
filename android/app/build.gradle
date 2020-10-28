@@ -32,7 +32,7 @@ keystoreProperies.load(new FileInputStream(keystoreProperiesFile))
 android {
     signingConfigs {
         release {
-            storeFile file('C:\\Users\\Zoey\\keystore.jks')
+            storeFile file('D:\\OneDrive\\Personal\\Android Keys\\black_book\\keystore.jks')
             storePassword 'macaroni'
             keyAlias = 'key'
             keyPassword 'macaroni'
@@ -51,10 +51,10 @@ android {
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.imperialoctopus.black_book"
-        minSdkVersion 16
+        minSdkVersion 23
         targetSdkVersion 28
-        versionCode 3
-        versionName "2.0.0"
+        versionCode 5
+        versionName "2.1.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         proguardFiles getDefaultProguardFile('proguard-android.txt')
         manifestPlaceholders = [:]
@@ -65,7 +65,7 @@ android {
         release {
             //signingConfig signingConfigs.debug
             signingConfig signingConfigs.release
-
+            
             minifyEnabled true
             shrinkResources true
         }
