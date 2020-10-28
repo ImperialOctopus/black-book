@@ -17,6 +17,10 @@ class SignatureScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: title),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => Navigator.of(context).pop(),
+        child: const Icon(Icons.done),
+      ),
       body: BlocProvider(
         create: (context) => SignatureBloc(
             reference: reference,
