@@ -17,7 +17,6 @@ import 'screen/home/home_screen.dart';
 import 'screen/signature/signature_list_five_screen.dart';
 import 'screen/signature/signature_list_four_screen.dart';
 import 'screen/signature/signature_list_six_screen.dart';
-import 'screen/signature/signature_screen.dart';
 import 'screen/signature/signature_year_screen.dart';
 import 'service/checklist_service.dart';
 import 'service/signature_service.dart';
@@ -77,7 +76,7 @@ class _AppViewState extends State<AppView> {
         '/practical/four': (var context) => SignatureListFour(),
         '/practical/five': (var context) => SignatureListFive(),
         '/practical/six': (var context) => SignatureListSix(),
-        '/practical/signature': (var context) => SignatureScreen(),
+        //'/practical/signature': (var context) => SignatureScreen(),
         '/appendix': (var context) => AppendixScreen(),
         '/appendix/addresses': (var context) => const AddressesScreen(),
         '/appendix/biodata': (var context) => BioDataScreen(),

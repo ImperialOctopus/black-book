@@ -3,17 +3,21 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../bloc/signature/signature_bloc.dart';
 import '../../bloc/signature/signature_event.dart';
-import '../../bloc/signature_select/signature_select_cubit.dart';
 import '../../model/signature/stroke.dart';
+import '../../screen/signature/signature_screen.dart';
 import '../../service/signature_service.dart';
 import 'static_signature_canvas.dart';
 import 'static_signature_container.dart';
 
 class SignatureListItem extends StatelessWidget {
   final Widget title;
+  final Widget entryLabel;
   final String reference;
 
-  const SignatureListItem({@required this.title, @required this.reference});
+  const SignatureListItem(
+      {@required this.title,
+      @required this.entryLabel,
+      @required this.reference});
 
   @override
   Widget build(BuildContext context) {
@@ -35,8 +39,9 @@ class SignatureListItem extends StatelessWidget {
   }
 
   void openSignaturePage(BuildContext context, String reference) {
-    BlocProvider.of<SignatureSelectCubit>(context).setReference(reference);
-    Navigator.of(context).pushNamed('/practical/signature').then((value) =>
-        BlocProvider.of<SignatureBloc>(context).add(SignatureEventLoad()));
+    //BlocProvider.of<SignatureSelectCubit>(context).setReference(reference);
+    Navigator.of(context).push<void>(MaterialPageRoute(
+        builder: (context) =>
+            SignatureScreen(title: entryLabel, reference: reference)));
   }
 }

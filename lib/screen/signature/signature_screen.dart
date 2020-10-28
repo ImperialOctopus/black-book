@@ -3,23 +3,23 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../bloc/signature/signature_bloc.dart';
 import '../../bloc/signature/signature_event.dart';
-import '../../bloc/signature_select/signature_select_cubit.dart';
 import '../../component/signature/signature_canvas.dart';
-import '../../error/invalid_state.dart';
 import '../../model/signature/stroke.dart';
 import '../../service/signature_service.dart';
 
 class SignatureScreen extends StatelessWidget {
+  final Widget title;
+  final String reference;
+
+  const SignatureScreen({@required this.title, @required this.reference});
+
   @override
   Widget build(BuildContext context) {
-    if (BlocProvider.of<SignatureSelectCubit>(context).state == '') {
-      return InvalidStateComponent();
-    }
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(title: title),
       body: BlocProvider(
         create: (context) => SignatureBloc(
-            reference: BlocProvider.of<SignatureSelectCubit>(context).state,
+            reference: reference,
             signatureService: RepositoryProvider.of<SignatureService>(context))
           ..add(SignatureEventLoad()),
         child: BlocBuilder<SignatureBloc, List<Stroke>>(
@@ -27,6 +27,7 @@ class SignatureScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                title,
                 Padding(
                   padding: const EdgeInsets.all(20),
                   child: FittedBox(
