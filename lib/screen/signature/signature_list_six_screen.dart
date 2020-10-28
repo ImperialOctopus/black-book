@@ -19,10 +19,12 @@ class SignatureListSix extends StatelessWidget {
             children: [
               SignatureListItem(
                 title: Text('Michaelmas'),
+                entryLabel: Text('6th Year - VSCS (Michaelmas)'),
                 reference: '5_vscs_1',
               ),
               SignatureListItem(
                 title: Text('Lent'),
+                entryLabel: Text('6th Year - VSCS (Lent)'),
                 reference: '5_vscs_2',
               ),
             ],
