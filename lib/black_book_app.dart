@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'bloc/category/category_cubit.dart';
-import 'bloc/signature_select/signature_select_cubit.dart';
 import 'screen/appendix/addresses_screen.dart';
 import 'screen/appendix/appendix_screen.dart';
 import 'screen/appendix/bio_data_screen.dart';
@@ -45,9 +44,6 @@ class BlackBookApp extends StatelessWidget {
             BlocProvider<CategoryCubit>(
               create: (context) => CategoryCubit(),
             ),
-            BlocProvider<SignatureSelectCubit>(
-              create: (context) => SignatureSelectCubit(),
-            )
           ],
           child: AppView(),
         ));
