@@ -27,7 +27,10 @@ class SignatureScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                title,
+                DefaultTextStyle.merge(
+                  style: const TextStyle(fontSize: 20),
+                  child: title,
+                ),
                 Padding(
                   padding: const EdgeInsets.all(20),
                   child: FittedBox(
