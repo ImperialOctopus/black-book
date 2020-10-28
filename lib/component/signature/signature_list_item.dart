@@ -39,9 +39,11 @@ class SignatureListItem extends StatelessWidget {
   }
 
   void openSignaturePage(BuildContext context, String reference) {
-    //BlocProvider.of<SignatureSelectCubit>(context).setReference(reference);
-    Navigator.of(context).push<void>(MaterialPageRoute(
-        builder: (context) =>
-            SignatureScreen(title: entryLabel, reference: reference)));
+    Navigator.of(context)
+        .push<void>(MaterialPageRoute(
+            builder: (context) =>
+                SignatureScreen(title: entryLabel, reference: reference)))
+        .then<void>((_) =>
+            BlocProvider.of<SignatureBloc>(context).add(SignatureEventLoad()));
   }
 }
