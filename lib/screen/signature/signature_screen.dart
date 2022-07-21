@@ -69,17 +69,17 @@ class SignatureScreen extends StatelessWidget {
                         onPressed: () {
                           showDialog<AlertDialog>(
                             context: context,
-                            child: AlertDialog(
+                            builder: (context) => AlertDialog(
                               title: const Text("Clear Signature"),
                               content: const Text(
                                   // ignore: lines_longer_than_80_chars
                                   "Are you sure you want to clear this signature?"),
                               actions: [
-                                FlatButton(
+                                TextButton(
                                   child: const Text("Cancel"),
                                   onPressed: () => Navigator.of(context).pop(),
                                 ),
-                                FlatButton(
+                                TextButton(
                                     child: const Text("Clear Signature"),
                                     onPressed: () {
                                       Navigator.of(context).pop();

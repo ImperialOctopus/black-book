@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'menu_item.dart';
+import 'home_screen_item.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen();
@@ -15,7 +15,7 @@ class HomeScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              MenuItem(
+              HomeScreenItem(
                 name: 'Clinical Checklist',
                 child: Image.asset(
                   'assets/images/checklist.jpg',
@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 onTap: () => Navigator.of(context).pushNamed('/checklist'),
               ),
-              MenuItem(
+              HomeScreenItem(
                 name: 'Practical Sign-Off',
                 child: Image.asset(
                   'assets/images/practical.jpg',
@@ -31,7 +31,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 onTap: () => Navigator.of(context).pushNamed('/practical'),
               ),
-              MenuItem(
+              HomeScreenItem(
                 name: 'Appendix',
                 child: Image.asset(
                   'assets/images/books.jpg',

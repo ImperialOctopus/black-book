@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class MenuItem extends StatelessWidget {
+class HomeScreenItem extends StatelessWidget {
   final int labelAlpha = 80;
 
   final String name;
@@ -8,7 +8,8 @@ class MenuItem extends StatelessWidget {
   final double maxHeight;
   final Function() onTap;
 
-  const MenuItem({this.name, this.child, this.maxHeight = 200, this.onTap});
+  const HomeScreenItem(
+      {this.name, this.child, this.maxHeight = 200, this.onTap});
 
   @override
   Widget build(BuildContext context) {
